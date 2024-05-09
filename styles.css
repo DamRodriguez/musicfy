@@ -28,6 +28,11 @@ body{
 
 .fondoNosotros{
     background: white;
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    height: 100%;
 }
 
 .article{
