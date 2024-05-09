@@ -618,6 +618,7 @@ h1{
     width: 60px;
     align-items:start;
     margin-bottom: -5px;
+    padding-bottom: 10px;
 }
   
 .nav-derecha ul {
@@ -1317,8 +1318,6 @@ h1{
 footer{
     margin-left: 5px;
     margin-right: 70px;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .footer{
@@ -1326,8 +1325,6 @@ footer{
     padding-top: 10%;
     background-color: black;
     border-radius: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .redes-sociales{
@@ -1339,7 +1336,6 @@ footer{
     padding: 5px;
     position: relative;
     margin-top: -5px;
-    margin-bottom: -1px;
 }
 
 .redes-sociales::after{
@@ -1424,10 +1420,8 @@ footer{
     background-color: rgb(0, 0, 0);
     height: 20px;
     padding: 5px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     margin-top: -1px;
-    margin-bottom: -5px;
+    padding-bottom: 15px;
     font-size: 100%;
 }
 
