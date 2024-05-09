@@ -33,6 +33,7 @@ body{
 .article{
     display: flex;
     padding-top: 30px;
+    width: 100%;
 }
 
 
@@ -53,9 +54,7 @@ body{
     padding-top: 10%;
 }
 
-.lista1, .lista2{
-    padding-left: 30px;
-}
+
 
 .miniColumna{
     display: flex;
@@ -89,6 +88,25 @@ body{
     font-size: 30px;
 }
 
+.lista1, .lista2{
+    
+    padding-left: 30px;
+}
+
+.link-nosotros{
+    color: rgb(85, 0, 255);
+    font-weight: 500;
+}
+
+.link-nosotros:hover{
+    text-decoration: underline;
+}
+
+.lista1 li a:hover{
+    text-decoration: underline;
+}
+
+
 .lista1 li{
     font-weight:initial;
 }
@@ -103,6 +121,7 @@ body{
 }
 
 @media (max-width: 900px){
+
     .article{
         display: grid;
         grid-template-columns: 1;
@@ -111,11 +130,16 @@ body{
 
     .columna1{
         width: 70%;
+        margin-top: 20px;
+        position: relative;
     }
 
     .columna2{
         padding-left: 13%;
-        width: 30%;
+        width: 65%;
+        padding-bottom: 35px;
+        padding-top: 0px;
+
     }
 }
 
@@ -268,8 +292,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 3%;
-    background-color: rgba(0, 0, 0, 0.362);
+    padding-top: 10px;
+    background: rgb(0,19,48);
+background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
     color: white;
     text-align: left;
 }
@@ -1126,6 +1151,10 @@ h1{
     .footer .ft-centrado a{
         font-size: 80%;
     }
+
+    .footer2{
+        width: 100%;
+    }
 }
 
 
@@ -1382,4 +1411,11 @@ footer{
 
 .footer a:hover{
     text-decoration:underline;
+}
+
+.footer2{
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0px;
+    padding-top: 30px;
 }
