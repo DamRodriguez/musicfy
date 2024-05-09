@@ -208,9 +208,9 @@ body{
 
 
 .fondoAyuda{
-    background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgb(22, 72, 125) 100%);
-    background-size:cover;
+    background: linear-gradient(0deg, rgba(0,0,0,1) -100%, rgb(22, 72, 125) 100%);
     color: white;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment:scroll;
@@ -360,8 +360,10 @@ background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
     color: white;
     background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(24, 81, 142) 100%);
     background-size:cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:scroll;
+    height: 100%;
 }
 
 .grid-ayuda{
