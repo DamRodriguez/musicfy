@@ -94,7 +94,7 @@ body{
 }
 
 .link-nosotros{
-    color: rgb(85, 0, 255);
+    color: rgb(0, 76, 218);
     font-weight: 500;
 }
 
@@ -167,7 +167,7 @@ body{
 }
 
 .navInfo li{
-    
+    text-shadow: rgb(0, 0, 0) 1px 1px 2px;
     margin: 25px;
     font-size: 150%;
 }
@@ -191,18 +191,17 @@ body{
 }
 
 .navegadorInfo a{
-    
-    font-size: 1em;
+    text-shadow: rgb(0, 0, 0) 1px 1px 2px;
+    font-size: 1.1em;
     color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
   
 }
 
 
 .fondoAyuda{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,83,170,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgb(22, 72, 125) 100%);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -263,6 +262,11 @@ body{
     padding: 10px;
     font-size: 260%;
     text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
+}
+
+.text1{
+    font-weight: 400;
 }
 
 .imagenesAyuda{
@@ -345,8 +349,10 @@ background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
 
 .fondoAyudaLinks{
     color: white;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(0,83,170,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) -50%, rgb(24, 81, 142) 100%);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .grid-ayuda{
@@ -360,12 +366,12 @@ background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
 .item-ayuda{
     grid-row: 1/2;
     grid-column: 2;
-    background: rgba(1, 0, 11, 0.266);
+    background: radial-gradient(circle, rgba(1, 61, 103, 0.693) 0%, rgba(0, 0, 0, 0.293) 100%);
     border-radius: 15px;
     padding: 15px;
     margin-top: 30%;
     min-width: 450px;
-    box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.56);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.685);
     
     
 }
@@ -381,9 +387,8 @@ background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
     
 }
 
-.item-ayuda 
-.item-ayuda, h1{
-    text-shadow: 2px 2px 5px #0000009a;
+.item-ayuda h1{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.57);
     padding-left: 5px;
 }
 
@@ -690,6 +695,7 @@ h1{
 .titulo-index{
     font-size: 50px;
     text-shadow: 2px 2px 9px #0000009a;
+    padding-left: 8px;
 }
 
 .logo-index1 p{
@@ -1423,6 +1429,14 @@ footer{
 .footer2{
     width: 100%;
     margin-left: 0;
-    margin-bottom: 10px;
     padding-top: 30px;
+    margin-bottom: -10px;
+}
+
+.headerAyuda .sin-sombra{
+    text-shadow: none;
+}
+
+.sin-sombra i{
+    text-shadow: none;
 }
