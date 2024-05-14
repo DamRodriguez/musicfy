@@ -723,7 +723,7 @@ h1{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgb(69, 1, 1) 100%);
+    background: linear-gradient(90deg, rgba(73, 6, 6, 0.6) 0%, rgba(46, 7, 7, 0.751) 100%);
     display: flex;
     align-items: end;
     transition: 1s ease-in;
@@ -732,9 +732,10 @@ h1{
 .logo-index img{
     max-width: 200px;
     height: auto;
-    filter: hue-rotate(100deg);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px 20 rgba(0, 0, 0, 0.408);
+    filter: hue-rotate(95deg);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.904);
+    
 }
 
 .titulo-index{
@@ -786,12 +787,6 @@ h1{
 
 .item-index .nombre-artista {
     margin-top: -12px;
-}
-
-.artistas-populares h2:hover{
-    -webkit-transform:scale(1);transform:scale(1.03);
-    text-decoration: underline;
-    
 }
 
 .logo-index1{
