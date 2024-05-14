@@ -7,7 +7,7 @@ playButtons.forEach((playButton, index) => {
     const botonPause = playButton.querySelector(".boton-pausa");
 
     playButton.addEventListener("click", () => {
-        if (audio.paused || audio.ended) {
+        if (audio.paused) {
             botonPause.classList.remove("hide");
             botonPlay.classList.add("hide");
             audio.play();
