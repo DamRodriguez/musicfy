@@ -684,7 +684,6 @@ h1{
 }
   
 .nav-arriba{
-    margin-left: 5px;
     height: 40px;
     background: rgb(62, 1, 1);
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.668) -60%, rgba(82, 1, 1, 0.778) 100%);
@@ -831,7 +830,7 @@ h1{
         width: 45px;
     }
 
-    .nav-arriba{
+    .mainIndex .nav-arriba{
         width: calc(100% - 60px);
     }
     
