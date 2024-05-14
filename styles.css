@@ -684,7 +684,7 @@ h1{
 }
   
 .nav-arriba{
-    margin-left: 5px;
+    margin-right: 5px;
     height: 40px;
     background: rgb(62, 1, 1);
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.668) -60%, rgba(82, 1, 1, 0.778) 100%);
@@ -696,7 +696,25 @@ h1{
     display: flex;
     align-items: center;
     z-index: 999;
+    overflow: hidden;
+    white-space: nowrap;
 }
+
+.marqueeNav {
+    width: 100%;
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    
+    100% {
+      transform: translateX(calc(-30%));
+    }
+  }
 
 
 
@@ -826,6 +844,21 @@ h1{
 
 
 @media (max-width: 750px){
+
+    .marqueeNav {
+        width: 100%;
+        animation: marquee 7s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        
+        100% {
+          transform: translateX(calc(-100%));
+        }
+      }
 
     .nav-derecha{
         width: 45px;
