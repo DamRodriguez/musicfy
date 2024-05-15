@@ -839,7 +839,7 @@ h1{
 @media (max-width: 750px){
 
     .item-index .titulo-foto-index{
-        font-size: 90%;
+        font-size: 80%;
     }
 
     .marqueeNav {
@@ -1239,8 +1239,8 @@ h1{
         font-size: 160%;
     }
 
-    .formulario{
-        ;
+    .artista6{
+        background-image: url(img/boris4.png);
     }
 }
 
@@ -1254,7 +1254,6 @@ h1{
     width: 25px;
     height: 25px;
 }
-
 
 
 .reproducir .boton-play{
@@ -1528,8 +1527,8 @@ footer{
 
 .formulario{
     justify-content: center;
-    background-color: rgb(56, 99, 150);
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.308);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.386) 0%, rgba(0, 0, 0, 0.293) 100%);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.703);
     max-width: 350px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1573,8 +1572,8 @@ textarea {
 
 .formulario button{
     display: flex;
-    background-color: rgb(24, 81, 142);
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.663);
+    background: radial-gradient(circle, rgba(160, 210, 254, 0.69) -10%, rgba(123, 180, 246, 0.537) 100%);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.322);
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -1583,8 +1582,8 @@ textarea {
 
 .inicio-sesion button{
     display: flex;
-    background-color: rgb(24, 81, 142);
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.663);
+    background: radial-gradient(circle, rgba(160, 210, 254, 0.69) -10%, rgba(123, 180, 246, 0.537) 100%);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.322);
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -1592,7 +1591,7 @@ textarea {
 }
 
 .registrarme button:hover {
-    background-color: rgb(55, 114, 178);
+    background-color: rgba(102, 166, 234, 0.777);
 }
 
 .registrarme button{
@@ -1600,6 +1599,7 @@ textarea {
     padding: 10px;
     padding-left: 25px;
     padding-right: 25px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
 }
 
 .checkbox{
@@ -1640,24 +1640,29 @@ textarea {
 
 .inicio-sesion{
     justify-content: center;
-    background-color: rgb(56, 99, 150);
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.308);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.386) 0%, rgba(0, 0, 0, 0.293) 100%);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.703);
     max-width: 340px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     padding-top: 10px;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 150px;
     align-items: center;
     display: flex;
     border-radius: 10px;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
 }
 
 .crearCuenta{
     display: flex;
     justify-content: center;
+    font-size: 90%;
+}
+
+.iniciarSesion{
+    font-size: 120%;
 }
 
 .campo{
@@ -1692,4 +1697,23 @@ textarea {
 .terminos4{
     font-size: 115%;
     
+}
+
+.fondoTerminos{
+    background: white;
+}
+
+.fondoCuenta{
+    color: white;
+    background: rgb(196,0,255);
+    background: linear-gradient(180deg, rgb(108, 177, 255) 0%, rgba(0,0,0,1) 100%);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    height: 100%;
+}
+
+.artista6{
+    background-image: url(img/boris3.png);
 }
