@@ -310,7 +310,7 @@ body{
     flex-direction: column;
     padding-top: 10px;
     background: rgb(0,19,48);
-background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
+    background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
     color: white;
     text-align: left;
 }
@@ -330,6 +330,7 @@ background: linear-gradient(180deg, rgba(0,19,48,1) 0%, rgba(0,0,0,1) 76%);
 
 .search-box i:hover{
     -webkit-transform:scale(1.3);transform:scale(0.9);
+    
 }
 
 .imagenesAyuda img{
@@ -989,6 +990,10 @@ h1{
     .contenedor-cancion .reproducir img{
         width: 14px;
     }
+
+    .formulario, .inicio-sesion{
+        width: 280px;
+    }
 }
 
 .reproductor-audio{
@@ -1228,6 +1233,14 @@ h1{
 
     .footer2{
         width: 100%;
+    }
+
+    .formulario .inicio-sesion, .titulo{
+        font-size: 160%;
+    }
+
+    .formulario{
+        ;
     }
 }
 
@@ -1505,4 +1518,178 @@ footer{
 
 .artista3{
     background-image:url(img/nafta-portada.png);
+}
+
+.artista5{
+    background-image: url(img/and-one-fondo.png);
+}
+
+/* Cuenta */
+
+.formulario{
+    justify-content: center;
+    background-color: rgb(56, 99, 150);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.308);
+    max-width: 350px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    border-radius: 10px;
+}
+
+.titulo{
+    text-align: center;
+    padding-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
+}
+
+.formulario .inicio-sesion, input{
+    outline: none;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nacionalidadCuenta{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario button{
+    display: flex;
+    background-color: rgb(24, 81, 142);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.663);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.inicio-sesion button{
+    display: flex;
+    background-color: rgb(24, 81, 142);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.663);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.registrarme button:hover {
+    background-color: rgb(55, 114, 178);
+}
+
+.registrarme button{
+    font-size: 125%;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.checkbox{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.terminos{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.registrarme{
+    display: flex;
+    justify-content: center;
+}
+
+.subrayado:hover{
+    text-decoration: underline;
+}
+
+.o{
+    display: flex;
+    justify-content: center;
+}
+
+.cuenta{
+    display: flex;
+    justify-content: center;
+    color: black;
+    border-color: #000000;
+}
+
+.inicio-sesion{
+    justify-content: center;
+    background-color: rgb(56, 99, 150);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.308);
+    max-width: 340px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    margin: auto;
+    margin-top: 80px;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 300px;
+}
+
+.crearCuenta{
+    display: flex;
+    justify-content: center;
+}
+
+.campo{
+    padding-bottom: 20px;
+}
+
+.ingreso{
+    width: 100%;
+    padding: 5px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.terminos2{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+}
+
+.terminos2 p{
+    font-size: 100%;
+}
+
+.terminos3{
+    font-style: oblique;
+    font-size: 120%;
+}
+
+.terminos4{
+    font-size: 115%;
+    
 }

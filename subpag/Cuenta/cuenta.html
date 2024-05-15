@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Musicfy_Icon.png">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="https://kit.fontawesome.com/05e3f5f7c1.js" crossorigin="anonymous"></script>
+    <title>Musicfy</title>
+</head>
+
+<body class="fondoAyudaLinks" ondragstart="return false">
+    <header class="headerAyuda"> 
+        <nav class="navegadorInfo">
+            <a class="LogonavInfo" href="info.html"><img src="../../img/Icon.png" alt="">Musicfy</a>
+            <ul class="navInfo">
+                <li><a href="../../index.html"><i class="fa-solid fa-house"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="formulario">
+            <form action="" method="post">
+                <h2 class="titulo">Registro</h2>
+                <div class="campo">
+                    <label for="nombreUsuario">Nombre completo:</label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuarioIngresado"><br>
+                </div>
+                <div class="campo">
+                    <label for="apellidoDeUsuario">Apellido:</label>
+                    <input type="text" id="apellidoDeUsuario" name="apellidoUsuarioIngresado"><br>
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br>
+                </div>
+                <div class="campo">
+                    <label for="passwordUsuario">Contraseña:</label>
+                    <input type="password" id="passwordUsuario" name="passwordUsuarioIngresado"><br>
+                </div>
+                <div class="campo">
+                    <label for="fechaDeNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaDeNacimiento" name="fechaDeNacimientoIngresado"><br>
+                </div>
+                
+                <div class="nacionalidadCuenta">
+                    <label for="pais">Nacionalidad:</label>
+                    <select id="pais" name="nacionalidadUsarioIngresada">
+                        <option> Selecione su pais </option>
+                        <option value="AR">Argentina</option>
+                        <option value="BR">Brasil</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colomobia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="ES">El Salvador</option>
+                        <option value="GU">Guatemala</option>
+                        <option value="HO">Honduras</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="PM">Panama</option>
+                        <option value="PA">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="UR">Uruguay</option>
+                        <option value="VNZ">Venezuela</option>
+                    </select> 
+                </div>
+                
+                <div class="checkbox">
+                    <input type="checkbox" id="terminos">   
+                    <label for="termminos"><a class="subrayado" href="../Terminos/terminos.html" target="_blank">Acepto terminos y condiciones</a></label>
+                </div>
+
+                <br>
+                <div class="registrarme">
+                    <button type="submit" value="Submit">Registrarme</button>
+                </div>    
+                <p class="o">o</p>
+
+                <div class="cuenta">
+                    <a class="subrayado" href="inicioSesion.html">Iniciar sesión</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer footer2">
+
+        <div class="redes-sociales rs2">
+          <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
+          <a href=""><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+        </div>
+    
+        <div class="logo-footer">
+          <div class="logo-footer1">
+            <img src="../../img/Icon.png" alt="">
+          </div>
+    
+          <div class="ft-centrado">
+            <div class="ft-columna1">
+              <h4>Empresa</h4>
+              <a href="nosotros.html"><p>Acerca de</p></a>
+            </div>
+    
+            <div class="ft-columna2">
+              <h4>Enlaces útiles</h4>
+              <a href="../Ayuda/info.html"><p>Asistencia</p></a>
+            </div>
+          </div>    
+    
+        </div>
+    
+        <div class="privacidad">
+          <a href=""><p>Política de Privacidad</p></a>
+          <p>© 2024 Musicfy Inc.</p>
+        </div>
+      </footer>
+
+</body>
+</html>
