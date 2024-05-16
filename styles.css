@@ -1660,6 +1660,7 @@ textarea {
     display: flex;
     border-radius: 10px;
     margin-bottom: 400px;
+   
 }
 
 .crearCuenta{
@@ -1674,16 +1675,6 @@ textarea {
 
 .campo{
     padding-bottom: 20px;
-}
-
-.ingreso{
-    width: 100%;
-    padding: 5px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
 }
 
 .terminos2{
@@ -1718,6 +1709,7 @@ textarea {
     background-repeat: no-repeat;
     background-attachment:scroll;
     height: 100%;
+    
 }
 
 .artista6{
