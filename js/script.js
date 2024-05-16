@@ -19,7 +19,7 @@ playButtons.forEach((playButton, index) => {
     });
 });
 
-/*validacion registro*/
+/*----------------------validacion registro------------------------------*/
 
 function validar(Document){
     if(Document ==="Login"){
