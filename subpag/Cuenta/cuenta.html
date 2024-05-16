@@ -21,38 +21,43 @@
 
     <main>
         <div class="formulario">
-            <form action="" method="post">
+            <form action="#" method="get" id="formRegistro">
                 <h2 class="titulo">Registro</h2>
                 <div class="campo">
-                    <label for="nombreUsuario">Nombre completo:</label>
-                    <input type="text" id="nombreUsuario" name="nombreUsuarioIngresado"><br>
+                    <label class="cuenta1" for="nombreUsuario">Nombre completo:</label>
+                    <input type="text" id="nombreUsuarioIngresado" name="nombreUsuarioIngresado"><br>
+                    <div class="error" id="errorNombre"></div>
                 </div>
                 <div class="campo">
-                    <label for="apellidoDeUsuario">Apellido:</label>
-                    <input type="text" id="apellidoDeUsuario" name="apellidoUsuarioIngresado"><br>
+                    <label class="cuenta1" for="apellidoDeUsuario">Apellido:</label>
+                    <input type="text" id="apellidoDeUsuarioIngresado" name="apellidoUsuarioIngresado"><br>
+                    <div class="error" id="errorApellido"></div>
                 </div>
                 <div class="campo">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br>
+                    <label class="cuenta1" for="email">Email:</label>
+                    <input type="email" id="emailIngresado" name="email"><br>
+                    <div class="error" id="errorMail"></div>
                 </div>
                 <div class="campo">
-                    <label for="passwordUsuario">Contraseña:</label>
-                    <input type="password" id="passwordUsuario" name="passwordUsuarioIngresado"><br>
+                    <label class="cuenta1" for="passwordUsuario">Contraseña:</label>
+                    <input type="password" id="passwordUsuarioIngresado" name="passwordUsuarioIngresado"><br>
+                    <div class="error" id="errorPassword"></div>
                 </div>
                 <div class="campo">
-                    <label for="fechaDeNacimiento">Fecha de nacimiento:</label>
-                    <input type="date" id="fechaDeNacimiento" name="fechaDeNacimientoIngresado"><br>
+                    <label class="cuenta1" for="fechaDeNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaDeNacimientoIngresado" name="fechaDeNacimientoIngresado"><br>
+                    <div class="error" id="errorFecha"></div>
                 </div>
                 
                 <div class="nacionalidadCuenta">
-                    <label for="pais">Nacionalidad:</label>
-                    <select id="pais" name="nacionalidadUsarioIngresada">
-                        <option> Selecione su pais </option>
+                    <label class="cuenta1" for="pais">Nacionalidad:</label>
+                    <select id="paisIngresado" name="nacionalidadUsuarioIngresada">
+                        <option value="0"> Selecione su pais </option>
                         <option value="AR">Argentina</option>
                         <option value="BR">Brasil</option>
                         <option value="BO">Bolivia</option>
                         <option value="CH">Chile</option>
-                        <option value="CO">Colomobia</option>
+                        <option value="CO">Colombia</option>
                         <option value="CR">Costa Rica</option>
                         <option value="EC">Ecuador</option>
                         <option value="ES">El Salvador</option>
@@ -64,22 +69,25 @@
                         <option value="PE">Perú</option>
                         <option value="UR">Uruguay</option>
                         <option value="VNZ">Venezuela</option>
-                    </select> 
+                    </select>
+                    
                 </div>
+                <div class="error" id="errorPais"></div>
                 
                 <div class="checkbox">
-                    <input type="checkbox" id="terminos">   
-                    <label for="termminos"><a class="subrayado" href="../Terminos/terminos.html" target="_blank">Acepto terminos y condiciones</a></label>
+                    <input type="checkbox" name="mycheckbox" id="terminos-checkbox">   
+                    <label class="cuenta1" for="terminos"><a class="subrayado" href="../Terminos/terminos.html" target="_blank">Acepto terminos y condiciones</a></label>
                 </div>
+                <div class="error" id="errorTyC"></div>
 
                 <br>
                 <div class="registrarme">
-                    <button type="submit" value="Submit">Registrarme</button>
+                    <button type="submit" onclick="validar('Register')" value="Registro">Registrarme</button>
                 </div>    
                 <p class="o">o</p>
 
                 <div class="cuenta">
-                    <a class="subrayado iniciarSesion" href="inicioSesion.html">Iniciar sesión</a>
+                    <a class="subrayado" href="inicioSesion.html">Iniciar sesión</a>
                 </div>
 
             </form>
@@ -88,36 +96,35 @@
 
     <footer class="footer footer2">
 
-        <div class="redes-sociales">
-          <a href="https://www.instagram.com/damrod_?igsh=MXFteHZmemI0YnlzcQ==" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-          <a href="https://wa.me/+5491159641031" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
-          <a href="https://www.facebook.com/damian.rodriguez.52056223/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
-        </div>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/damrod_?igsh=MXFteHZmemI0YnlzcQ==" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="https://wa.me/+5491159641031" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
+        <a href="https://www.facebook.com/damian.rodriguez.52056223/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+      </div>
     
         <div class="logo-footer">
-            <div class="logo-footer1">
-                <img src="../../img/Icon.png" alt="">
+          <div class="logo-footer1">
+            <img src="../../img/Icon.png" alt="">
+          </div>
+    
+          <div class="ft-centrado">
+            <div class="ft-columna1">
+              <h4>Empresa</h4>
+              <a href="../Nosotros/nosotros.html"><p>Acerca de</p></a>
             </div>
     
-            <div class="ft-centrado">
-                <div class="ft-columna1">
-                    <h4>Empresa</h4>
-                    <a href="../Nosotros/nosotros.html"><p>Acerca de</p></a>
-                </div>
+            <div class="ft-columna2">
+              <h4>Enlaces útiles</h4>
+              <a href="../Ayuda/info.html"><p>Asistencia</p></a>
+            </div>
+          </div>    
     
-                <div class="ft-columna2">
-                    <h4>Enlaces útiles</h4>
-                    <a href="../Ayuda/info.html"><p>Asistencia</p></a>
-                </div>
-            </div>    
         </div>
-    
         <div class="privacidad">
           <a href="../Terminos/terminos.html"><p>Política de Privacidad</p></a>
           <p>© 2024 Musicfy Inc.</p>
         </div>
-    
-    </footer>
-
+      </footer>
+      <script src="../../js/script.js"></script>
 </body>
 </html>
