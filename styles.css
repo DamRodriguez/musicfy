@@ -1528,7 +1528,7 @@ footer{
 .formulario{
     justify-content: center;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.386) 0%, rgba(0, 0, 0, 0.293) 100%);
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.703);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.558);
     max-width: 350px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1648,7 +1648,7 @@ textarea {
 .inicio-sesion{
     justify-content: center;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.386) 0%, rgba(0, 0, 0, 0.293) 100%);
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.703);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.558);
     max-width: 340px;
     padding-left: 10px;
     padding-right: 10px;
