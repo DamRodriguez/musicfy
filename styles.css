@@ -738,7 +738,7 @@ h1{
     filter: hue-rotate(95deg);
     border-radius: 15px;
     box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.581);
-    border: 2px solid rgba(0, 0, 0, 0.448);
+    
     
 }
 
@@ -828,8 +828,8 @@ h1{
 }
 
 .item-index .titulo-foto-index{
-    font-size: 130%;
-    font-weight: 450;
+    font-size: 125%;
+    font-weight: 350;
 }
 
 .item-index .nombre-artista{
@@ -1249,6 +1249,10 @@ h1{
 
     .artista6{
         background-image: url(img/boris4.png);
+    }
+
+    .letraPequeña{
+        font-size: 75%;
     }
 }
 
@@ -1760,4 +1764,5 @@ textarea {
     font-size: 350%;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
 }
+
 
