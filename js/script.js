@@ -20,6 +20,7 @@ playButtons.forEach((playButton, index) => {
 });
 
 /*validacion registro*/
+
 function validar(Document){
     if(Document ==="Login"){
         validacionLogin();
@@ -51,6 +52,7 @@ function validar(Document){
 
         }
     }
+    
     function validarApellido(){
         let inputApellido = document.querySelector("#apellidoDeUsuarioIngresado")
         if (inputApellido.value.length < 4 || inputApellido.value.length > 12) {
@@ -70,6 +72,7 @@ function validar(Document){
             return true;
         }
     }
+
     function validarMail(){
         var validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
         let inputMail = document.querySelector("#emailIngresado")
@@ -87,6 +90,7 @@ function validar(Document){
             return false;
         }
     }
+
     function validarPassword(){
         let inputPassword = document.querySelector("#passwordUsuarioIngresado")
         if(Document === "Login"){
@@ -105,6 +109,7 @@ function validar(Document){
                 return true;
             }
         }
+
         else{
             if (inputPassword.value.length < 4 || inputPassword.value.length > 12) {
                 let divError = document.querySelector("#errorPassword")
@@ -121,8 +126,8 @@ function validar(Document){
                 return true;
             }
         }
-        
     }
+
     function validarFecha(){
         let inputFecha = document.querySelector("#fechaDeNacimientoIngresado")
         if (inputFecha.value.length < 4 || inputFecha.value.length > 12) {

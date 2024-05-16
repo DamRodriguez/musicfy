@@ -1732,16 +1732,13 @@ textarea {
 
 /*validacion js*/
 .error{
-    padding: 5px;
-    color:#fff;
     background-color: none;
-    
 }
 
 .active{
     font-size: 80%;
     background: rgb(199,45,45);
-    background: radial-gradient(circle, rgba(182, 38, 38, 0.625) 0%, rgba(160, 23, 23, 0.674) 100%);
+    background: radial-gradient(circle, rgba(235, 14, 14, 0.625) 0%, rgba(222, 30, 30, 0.674) 100%);
     border-radius: 5px;
     padding: 5px 7px 5px 7px;
     margin: 5px;
