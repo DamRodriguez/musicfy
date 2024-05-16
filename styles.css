@@ -726,7 +726,7 @@ h1{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(70, 6, 6, 0.6) 0%, rgba(46, 7, 7, 0.751) 100%);
+    background: linear-gradient(90deg, rgba(86, 10, 10, 0.49) 0%, rgba(46, 7, 7, 0.751) 100%);
     display: flex;
     align-items: end;
 }
@@ -736,14 +736,15 @@ h1{
     height: auto;
     filter: hue-rotate(95deg);
     border-radius: 15px;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.904);
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.581);
+    border: 2px solid rgba(0, 0, 0, 0.448);
     
 }
 
 .titulo-index{
-    font-size: 50px;
+    font-size: 30px;
     text-shadow: 2px 2px 9px #0000009a;
-    padding-left: 8px;
+    padding-left: 5px;
 }
 
 .logo-index1 p{
@@ -838,8 +839,10 @@ h1{
 
 @media (max-width: 750px){
 
+    
+
     .item-index .titulo-foto-index{
-        font-size: 80%;
+        font-size: 100%;
     }
 
     .marqueeNav {
@@ -885,6 +888,10 @@ h1{
 
     .logo-index .logo-index1 p{
         font-size: 12px;
+    }
+
+    .logo-index1 .logo-index{
+        font-size: 50%;
     }
  
   
@@ -1173,7 +1180,7 @@ h1{
     }
 
     .Index1 .portada1 .logo-index1 h1{
-        font-size: 150%;
+        font-size: 130%;
     }
 
     .Index1 .portada1 img{
@@ -1746,3 +1753,10 @@ textarea {
     border-radius: 5px;
     outline: none;
 }
+
+.tituloMusicfy{
+    padding-left: 8px;
+    font-size: 350%;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
+}
+
