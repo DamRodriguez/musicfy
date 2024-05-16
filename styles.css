@@ -181,7 +181,7 @@ body{
 }
 
 .navInfo li:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.2);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
 }
 
 .LogonavInfo img{
@@ -197,7 +197,7 @@ body{
 }
 
 .LogonavInfo:hover{
-    -webkit-transform:scale(1.0);transform:scale(1.07);
+    -webkit-transform:scale(1.0);transform:scale(1.04);
 }
 
 .navegadorInfo a{
@@ -325,11 +325,11 @@ body{
 }
 
 .imagenesAyuda img:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.1);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
 }
 
 .search-box i:hover{
-    -webkit-transform:scale(1.3);transform:scale(0.9);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
     
 }
 
@@ -427,8 +427,9 @@ body{
 }
 
 .item3-ayuda input:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.1);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
     border-color: white;
+    background-color: rgba(110, 167, 214, 0.063);
 }
 
 .item-ayuda
@@ -617,7 +618,7 @@ h1{
 }
 
 .AyudaCuenta2 .AyudaInicio:hover{
-    -webkit-transform:scale(1);transform:scale(1.06);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
     text-decoration: none;
 }
 
@@ -664,7 +665,7 @@ h1{
 }
   
 .nav-derecha ul i:hover {
-    -webkit-transform:scale(1);transform:scale(1.3);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
 }
 
 .mainIndex{
@@ -798,7 +799,7 @@ h1{
     background-color: rgba(255, 255, 255, 0.077);
     box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 4px;
     border-radius: 10px;
-    -webkit-transform:scale(1);transform:scale(1.03);
+    -webkit-transform:scale(1.0);transform:scale(1.03);
 }
 
 .lista-index1 .item-index img{
@@ -1074,7 +1075,7 @@ h1{
 .reproducir:hover{
     background-color: rgba(105, 105, 105, 0.285);
     border-radius: 50%;
-    -webkit-transform:scale(1);transform:scale(1.1);
+    -webkit-transform:scale(1.0);transform:scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 4px;
 }
 
@@ -1433,7 +1434,7 @@ footer{
 }
 
 .redes-sociales a:hover{
-    -webkit-transform:scale(1);transform:scale(1.2);
+    -webkit-transform:scale(1.0);transform:scale(1.2);
 }
 
 .logo-footer{
@@ -1604,7 +1605,7 @@ textarea {
 
 .registrarme button:hover {
     background-color: rgba(102, 166, 234, 0.777);
-    -webkit-transform:scale(1);transform:scale(1.03);
+    -webkit-transform:scale(1.0);transform:scale(1.03);
 }
 
 .registrarme button{
