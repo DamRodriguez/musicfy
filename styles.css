@@ -19,6 +19,11 @@ body{
 
 
 /*nosotros*/
+.consultaAqui{
+    margin-left: 20px;
+    font-size: 110%;
+}
+
 .nav-nosotros i{
     color: black;
 }
@@ -126,29 +131,6 @@ body{
 .titulo3{
     font-size: 17px;
     font-style: italic;
-}
-
-@media (max-width: 900px){
-
-    .article{
-        display: grid;
-        grid-template-columns: 1;
-        padding-left: none;
-    }
-
-    .columna1{
-        width: 70%;
-        margin-top: 20px;
-        position: relative;
-    }
-
-    .columna2{
-        padding-left: 13%;
-        width: 65%;
-        padding-bottom: 35px;
-        padding-top: 0px;
-
-    }
 }
 
 /*ayuda*/
@@ -322,6 +304,11 @@ body{
 .links{
     text-decoration: none;
     color: white;
+    font-size: 85%;
+}
+
+.ayudaRapida{
+    font-size: 130%;
 }
 
 .imagenesAyuda img:hover{
@@ -335,27 +322,6 @@ body{
 
 .imagenesAyuda img{
     border-radius: 10px;
-}
-
-
-@media (max-width: 560px){
-    .search-box {
-        min-width: 80%;
-    }
-    .search-box input {
-        min-width: 70%;
-    }
-    *{
-        font-size: 97%;
-    }
-
-  
-}
-
-@media (max-width: 760px){
-    .LogonavInfo img{
-        width: 50px;
-    }
 }
 
 /*ayuda1*/
@@ -449,19 +415,6 @@ h1{
     
 }
 
-
-
-@media (max-width: 700px){
-    .item-ayuda{
-        min-width: 300px;
-    }
-
-    .grid-ayuda .paises-min{
-        min-width: 300px;
-    }
-}
-
-
 .titulos-ayuda{
     font-size: 200%;
     padding-top: 15px;
@@ -497,12 +450,6 @@ h1{
     padding-bottom: 30px;
     background: radial-gradient(circle, rgba(1, 61, 103, 0.693) 0%, rgba(0, 0, 0, 0.293) 100%);
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.685);
-}
-
-@media (max-width: 750px){
-    .item-ayuda3 {
-        min-width: 300px;
-    }
 }
 
 .item2-ayuda2{
@@ -595,16 +542,6 @@ h1{
     font-size: 300%;
 }
 
-@media (max-width: 750px){
-    .AyudaCuenta4 i{
-        font-size: 65%;
-    }
-
-    .AyudaCuenta2 h1{
-        font-size: 200%;
-    }
-}
-
 .AyudaCuenta2 .fa-person-digging{
     font-size: 800%;
     display: flex;
@@ -629,7 +566,7 @@ h1{
     justify-content: center;
     height: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(74, 0, 0) 100%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(118, 0, 0, 0.574) 100%);
     position:fixed; 
     top: 0; 
     right: 0;
@@ -650,13 +587,14 @@ h1{
 .nav-derecha ul i{
     font-size: 150%;
     text-shadow: rgb(0, 0, 0) 1px 1px 4px;
-    
 }
 
-.nav-derecha ul li {
-    padding-bottom: 30px;
+.nav-derecha ul li{
+    margin-bottom: 30px;
     padding-top: 50px;
     font-size: 90%;
+    display: flex;
+    justify-content: center;
 }
   
 .nav-derecha ul li a {
@@ -674,7 +612,7 @@ h1{
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 5px;
+    margin: 5px 5px 0 5px;
     margin-top: 50px;
     color: white;
     padding-right: 65px;
@@ -690,8 +628,8 @@ h1{
 .nav-arriba{
     margin-right: 5px;
     height: 40px;
-    background: rgb(62, 1, 1);
-    background: linear-gradient(90deg, rgba(65, 3, 3, 0.668) -60%, rgba(73, 1, 1, 0.778) 100%);
+    background: rgb(138,0,0);
+background: radial-gradient(circle, rgba(96, 0, 0, 0.755) 0%, rgba(83, 0, 0, 0.574) 100%);
     border-radius: 10px;
     position: fixed;
     width: calc(100% - 75px);
@@ -718,9 +656,7 @@ h1{
     100% {
       transform: translateX(calc(-30%));
     }
-  }
-
-
+}
 
 .logo-index {
     padding: 20px;
@@ -732,15 +668,11 @@ h1{
     align-items: end;
 }
 
-
 .logo-index img{
     max-width: 200px;
     height: auto;
-    filter: hue-rotate(95deg);
     border-radius: 15px;
-    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.581);
-    
-    
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.429);
 }
 
 .titulo-index{
@@ -838,83 +770,6 @@ h1{
     font-size: 80%;
 }
 
-
-
-@media (max-width: 750px){
-
-    
-
-    .item-index .titulo-foto-index{
-        font-size: 90%;
-    }
-
-    .marqueeNav {
-        width: 100%;
-        animation: marquee 10s linear infinite;
-    }
-
-    @keyframes marquee {
-        0% {
-          transform: translateX(100%);
-        }
-        
-        100% {
-          transform: translateX(calc(-90%));
-        }
-      }
-
-    .nav-derecha{
-        width: 45px;
-    }
-
-    .nav-arriba{
-        width: calc(100% - 60px);
-    }
-    
-   .mainIndex{
-    padding-right: 50px;
-   }
-
-   .logo-index img{
-    width: 100px;
-    height: auto;
-    }
-
-    .lista-index1 .item-index img{
-        width: 110%;   
-        height: auto;
-    }
-
-    .logo-index .logo-index1 h1{
-        font-size: 35px;
-    }
-
-    .logo-index .logo-index1 p{
-        font-size: 12px;
-    }
-
-    .logo-index1 .logo-index{
-        font-size: 50%;
-    }
- 
-  
-}
-
-@media (max-width: 900px){
-
-    .lista-index .lista-index1{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    
-    }
-
-    .lista-index1 .item-index img{
-        width: 100%;
-        height: auto;
-    }
-
-}
-
 /*artistas populares*/
 
 .portada-artistas{
@@ -947,63 +802,6 @@ h1{
 .artista1{
     background-image: url(img/dmportada.png);
     
-}
-
-@media (max-width: 760px){
-
-    .Index1 .artista1{
-        background-image: url(img/dm-portada.png);
-        
-    }
-
-    .Index1 .artista2{
-        background-image: url(img/pcportada2.png);
-    }
-
-    .Index1 .artista4{
-        background-image: url(img/the-cure-portada2.png);
-    }
-
-    .portada-artistas{
-        height: 11rem;
-    }
-
-    .portada-artistas h1{
-        font-size: 220%;
-        padding-left: 7px;
-    }
-
-    .contenedor-cancion .lista-album img{
-        width: 55px;
-    }
-
-    .canciones .contenedor-cancion{
-        height: 45px;
-    }
-
-    .portada-artistas p{
-        font-size: 70%;
-    }
-
-    .contenedor-cancion .reproducir i{
-        font-size: 100%;
-    }
-
-    .contenedor-cancion .reproducir .boton-play{
-        font-size: 92%;
-    }
-
-    .contenedor-cancion .reproducir .boton-pausa{
-        font-size: 94%;
-    }
-
-    .contenedor-cancion .reproducir img{
-        width: 14px;
-    }
-
-    .formulario, .inicio-sesion{
-        width: 280px;
-    }
 }
 
 .reproductor-audio{
@@ -1116,144 +914,6 @@ h1{
 .cancion-nombre .duracion1{
     font-size: 90%;
 }
-
-@media (max-width: 750px){
-
-    .footer{
-        margin-right: 55px;
-    }
-
-    .lista-populares h2{
-        font-size: 130%;
-    }
-
-    .lista-index .artistas-populares h3{
-        font-size: 130%;
-    }
-
-    .cancion-nombre{
-        align-items: center;
-        align-content: center;
-        grid-template-columns: 85% 15%;
-        grid-template-rows: 30px;
-        grid-template-areas: "nombre duracion"
-        "oyentes duracion";
-    }
-
-    .nombre1{
-        grid-area: nombre;
-    }
-
-    .oyentes1{
-        grid-area: oyentes;
-    }
-
-    .sin-oyentes{
-        display: none;
-    }
-
-    .duracion1{
-        grid-area: duracion;
-    }
-
-    .cancion-nombre .nombre1{
-        font-size: 100%;
-    }
-    
-    .cancion-nombre .oyentes1{
-        font-size: 75%;
-    }
-    
-    .cancion-nombre .duracion1{
-        font-size: 75%;
-    }
-
-    
-   
-    .portada-artistas{
-        padding: 5px;
-    }
-
-    .lista-populares{
-        padding: 5px;
-    }
-
-    .Index1 .discografia{
-        padding: 15px;
-    }
-
-    .Index1 .portada1 .logo-index1 h1{
-        font-size: 130%;
-    }
-
-    .Index1 .portada1 img{
-        width: 130px;
-    }
-
-    .Index1 .portada1 .logo-index1 p{
-        font-size: 70%;
-    }
-
-    .contenedor-cancion .cancion-nombre .grupo1{
-        display: grid;
-        grid-template-rows: 25px;  
-    }
-
-    .logo-index .logo-index1 .mini-imagen img{
-        width: 20px;
-    }
-
-    .footer .redes-sociales{
-        padding: 0px;
-    }
-    
-    .footer .redes-sociales::after{
-        width: 35%;
-    }
-    .footer .redes-sociales::before{
-        width: 35%;
-    }
-
-    .footer .redes-sociales i{
-        font-size: 100%;
-    }
-
-    .footer .privacidad{
-        font-size: 80%;
-    }
-
-    .footer .logo-footer{
-        gap: 0px;
-    }
-
-    .footer .ft-centrado{
-        gap: 0px;
-    }
-
-    .footer .logo-footer img{
-        width: 55px;
-        margin-left: 10px;
-    }
-    .footer .ft-centrado h4{
-        font-size: 90%;
-    }
-    .footer .ft-centrado a{
-        font-size: 80%;
-    }
-
-    .footer2{
-        width: 100%;
-    }
-
-    .formulario .inicio-sesion, .titulo{
-        font-size: 160%;
-    }
-
-    .artista6{
-        background-image: url(img/boris4.png);
-    }
-}
-
 
 .contenedor-cancion .reproducir{
     display: flex;
@@ -1394,10 +1054,10 @@ footer{
 }
 
 .footer{
-    margin-top: -6px;
     padding-top: 10%;
     background-color: black;
     border-radius: 0;
+    padding-bottom: 5px;
 }
 
 .redes-sociales{
@@ -1491,11 +1151,9 @@ footer{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    height: 20px;
     padding: 5px;
-    margin-top: -1px;
-    padding-bottom: 15px;
     font-size: 100%;
+    position: relative;
 }
 
 .footer a:hover{
@@ -1730,13 +1388,15 @@ textarea {
     background-image: url(img/boris3.png);
 }
 
+
+
 /*validacion js*/
 .error{
     background-color: none;
 }
 
 .active{
-    font-size: 80%;
+    font-size: 75%;
     background: rgb(199,45,45);
     background: radial-gradient(circle, rgba(235, 14, 14, 0.625) 0%, rgba(222, 30, 30, 0.674) 100%);
     border-radius: 5px;
@@ -1765,3 +1425,339 @@ textarea {
 }
 
 
+/*media query*/
+
+@media (max-width: 900px){
+
+    .article{
+        display: grid;
+        grid-template-columns: 1;
+        padding-left: none;
+    }
+
+    .columna1{
+        width: 70%;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .columna2{
+        padding-left: 13%;
+        width: 65%;
+        padding-bottom: 35px;
+        padding-top: 0px;
+
+    }
+}
+
+@media (max-width: 760px){
+    .LogonavInfo img{
+        width: 50px;
+    }
+}
+
+
+@media (max-width: 700px){
+    .item-ayuda{
+        min-width: 300px;
+    }
+
+    .grid-ayuda .paises-min{
+        min-width: 300px;
+    }
+}
+
+
+@media (max-width: 750px){
+    .item-ayuda3 {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 750px){
+    .AyudaCuenta4 i{
+        font-size: 65%;
+    }
+
+    .AyudaCuenta2 h1{
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 750px){
+
+    .consultaAqui{
+        font-size: 90%;
+    }
+
+    .item-index .titulo-foto-index{
+        font-size: 90%;
+    }
+
+    .marqueeNav {
+        width: 100%;
+        animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        
+        100% {
+          transform: translateX(calc(-90%));
+        }
+      }
+
+    .nav-derecha{
+        width: 45px;
+    }
+
+    .nav-arriba{
+        width: calc(100% - 60px);
+    }
+    
+   .mainIndex{
+    padding-right: 50px;
+   }
+
+   .logo-index img{
+    width: 100px;
+    height: auto;
+    }
+
+    .lista-index1 .item-index img{
+        width: 110%;   
+        height: auto;
+    }
+
+    .logo-index .logo-index1 h1{
+        font-size: 35px;
+    }
+
+    .logo-index .logo-index1 p{
+        font-size: 12px;
+    }
+
+    .logo-index1 .logo-index{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 900px){
+
+    .lista-index .lista-index1{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+
+    .lista-index1 .item-index img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 760px){
+
+    .Index1 .artista1{
+        background-image: url(img/dm-portada.png);
+        
+    }
+
+    .Index1 .artista2{
+        background-image: url(img/pcportada2.png);
+    }
+
+    .Index1 .artista4{
+        background-image: url(img/the-cure-portada2.png);
+    }
+
+    .portada-artistas{
+        height: 11rem;
+    }
+
+    .portada-artistas h1{
+        font-size: 220%;
+        padding-left: 7px;
+    }
+
+    .contenedor-cancion .lista-album img{
+        width: 55px;
+    }
+
+    .canciones .contenedor-cancion{
+        height: 45px;
+    }
+
+    .portada-artistas p{
+        font-size: 70%;
+    }
+
+    .contenedor-cancion .reproducir i{
+        font-size: 100%;
+    }
+
+    .contenedor-cancion .reproducir .boton-play{
+        font-size: 92%;
+    }
+
+    .contenedor-cancion .reproducir .boton-pausa{
+        font-size: 94%;
+    }
+
+    .contenedor-cancion .reproducir img{
+        width: 14px;
+    }
+
+    .formulario, .inicio-sesion{
+        width: 280px;
+    }
+}
+
+@media (max-width: 750px){
+
+    .footer{
+        margin-right: 55px;
+    }
+
+    .lista-populares h2{
+        font-size: 130%;
+    }
+
+    .lista-index .artistas-populares h3{
+        font-size: 130%;
+    }
+
+    .cancion-nombre{
+        align-items: center;
+        align-content: center;
+        grid-template-columns: 85% 15%;
+        grid-template-rows: 30px;
+        grid-template-areas: "nombre duracion"
+        "oyentes duracion";
+    }
+
+    .nombre1{
+        grid-area: nombre;
+    }
+
+    .oyentes1{
+        grid-area: oyentes;
+    }
+
+    .sin-oyentes{
+        display: none;
+    }
+
+    .duracion1{
+        grid-area: duracion;
+    }
+
+    .cancion-nombre .nombre1{
+        font-size: 100%;
+    }
+    
+    .cancion-nombre .oyentes1{
+        font-size: 75%;
+    }
+    
+    .cancion-nombre .duracion1{
+        font-size: 75%;
+    }
+   
+    .portada-artistas{
+        padding: 5px;
+    }
+
+    .lista-populares{
+        padding: 5px;
+    }
+
+    .Index1 .discografia{
+        padding: 15px;
+    }
+
+    .Index1 .portada1 .logo-index1 h1{
+        font-size: 130%;
+    }
+
+    .Index1 .portada1 img{
+        width: 130px;
+    }
+
+    .Index1 .portada1 .logo-index1 p{
+        font-size: 70%;
+    }
+
+    .contenedor-cancion .cancion-nombre .grupo1{
+        display: grid;
+        grid-template-rows: 25px;  
+    }
+
+    .logo-index .logo-index1 .mini-imagen img{
+        width: 20px;
+    }
+
+    .footer .redes-sociales{
+        padding: 0px;
+    }
+    
+    .footer .redes-sociales::after{
+        width: 35%;
+    }
+    .footer .redes-sociales::before{
+        width: 35%;
+    }
+
+    .footer .redes-sociales i{
+        font-size: 100%;
+    }
+
+    .footer .privacidad{
+        font-size: 80%;
+    }
+
+    .footer .logo-footer{
+        gap: 0px;
+    }
+
+    .footer .ft-centrado{
+        gap: 0px;
+    }
+
+    .footer .logo-footer img{
+        width: 55px;
+        margin-left: 10px;
+    }
+    .footer .ft-centrado h4{
+        font-size: 90%;
+    }
+    .footer .ft-centrado a{
+        font-size: 80%;
+    }
+
+    .footer2{
+        width: 100%;
+    }
+
+    .formulario .inicio-sesion, .titulo{
+        font-size: 160%;
+    }
+
+    .artista6{
+        background-image: url(img/boris4.png);
+    }
+}
+
+@media (max-width: 560px){
+    .search-box {
+        min-width: 80%;
+    }
+    .search-box input {
+        min-width: 70%;
+    }
+    *{
+        font-size: 97%;
+    }
+}
