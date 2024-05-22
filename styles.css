@@ -1063,7 +1063,6 @@ footer{
     padding-top: 10%;
     background-color: black;
     border-radius: 0;
-    padding-bottom: 5px;
 }
 
 .redes-sociales{
@@ -1155,7 +1154,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    padding: 5px;
+    padding: 5px 5px 0 5px;
     font-size: 100%;
     position: relative;
 }
@@ -1208,11 +1207,12 @@ footer{
     padding-top: 10px;
     margin: auto;
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 40%;
     align-items: center;
     justify-items: center;
     display: flex;
     border-radius: 10px;
+    
 }
 
 .titulo{
@@ -1331,7 +1331,7 @@ textarea {
     align-items: center;
     display: flex;
     border-radius: 10px;
-    margin-bottom: 400px;
+    margin-bottom: 20%;
    
 }
 
@@ -1384,7 +1384,7 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment:scroll;
-    height: 100%;
+    height: auto;
     
 }
 
@@ -1437,6 +1437,16 @@ textarea {
 
 
 /*media query*/
+@media (max-width: 1200px) {
+    .inicio-sesion{
+        margin-bottom: 65%;
+    }
+
+    .articulo1{
+        margin-bottom: 25%;
+    }
+}
+
 
 @media (max-width: 900px){
 
@@ -1498,6 +1508,8 @@ textarea {
 }
 
 @media (max-width: 750px){
+    
+    
 
     .ft-columna1{
         width: 100px;
@@ -1554,7 +1566,7 @@ textarea {
     }
 
     .logo-index .logo-index1 h1{
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .logo-index .logo-index1 p{
@@ -1635,7 +1647,9 @@ textarea {
     .formulario, .inicio-sesion{
         width: 280px;
         margin-top: 90px;
+        margin-bottom: 90%;
     }
+
 }
 
 @media (max-width: 750px){
