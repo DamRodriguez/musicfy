@@ -612,7 +612,7 @@ h1{
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 0px 5px;
     margin-top: 50px;
     color: white;
     padding-right: 65px;
@@ -1166,8 +1166,7 @@ footer{
 .footer2{
     width: 100%;
     margin-left: 0;
-    padding-top: 30px;
-    margin-bottom: -10px;
+    padding-top: 20px;
 }
 
 .headerAyuda .sin-sombra{
