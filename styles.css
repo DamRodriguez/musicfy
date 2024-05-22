@@ -678,12 +678,14 @@ h1{
 .titulo-index{
     font-size: 30px;
     text-shadow: 2px 2px 9px #0000009a;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 .logo-index1 p{
     font-size: 15px;
     text-shadow: 2px 2px 9px #0000009a;
+    padding-top: 5px;
+    padding-bottom: 8px;
 }
 
 .lista-index{
@@ -725,6 +727,8 @@ h1{
 
 .logo-index1{
     padding-left: 5px;
+    position: relative;
+    top: 8px;
 }
 
 .item-index a:hover{
@@ -976,8 +980,7 @@ h1{
 }
 
 .portada1 .logo-index1 h1{
-    font-size: 250%;
-    margin-left: 3px;
+    font-size: 300%;
 }
 
 .portada1 .logo-index1 p{
@@ -1019,7 +1022,9 @@ h1{
 }
 
 .portada1{
-    background-color: black;
+    
+    background: rgb(55,0,0);
+    background: linear-gradient(270deg, rgba(55,0,0,1) 0%, rgba(0, 0, 0, 0.601) 100%);
 }
 
 .logo-index1 .mini-imagen{
@@ -1101,11 +1106,10 @@ footer{
 .logo-footer{
     color: white;
     background-color: rgb(0, 0, 0);
-    padding: 25px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
 }
 
 .ft-centrado{
@@ -1427,7 +1431,7 @@ textarea {
 
 .tituloMusicfy{
     padding-left: 8px;
-    font-size: 350%;
+    font-size: 400%;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
 }
 
@@ -1439,20 +1443,22 @@ textarea {
     .article{
         display: grid;
         grid-template-columns: 1;
-        padding-left: none;
+        ;
+        justify-items: center;
+        align-items: center;
     }
 
     .columna1{
-        width: 70%;
-        margin-top: 20px;
+        width: 80%;
+        margin-top: 40px;
         position: relative;
+        padding: 0;
     }
 
     .columna2{
-        padding-left: 13%;
-        width: 65%;
+        width: 80%;
         padding-bottom: 35px;
-        padding-top: 0px;
+        padding-top: 20px;
 
     }
 }
@@ -1493,12 +1499,21 @@ textarea {
 
 @media (max-width: 750px){
 
+    .ft-columna1{
+        width: 100px;
+    }
+    
+    .ft-columna2{
+        width: 100px;
+    }
+
     .consultaAqui{
         font-size: 90%;
     }
 
     .item-index .titulo-foto-index{
-        font-size: 90%;
+        font-size: 100%;
+        font-weight: 400;
     }
 
     .marqueeNav {
@@ -1539,7 +1554,7 @@ textarea {
     }
 
     .logo-index .logo-index1 h1{
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .logo-index .logo-index1 p{
@@ -1630,6 +1645,11 @@ textarea {
 
     .lista-populares h2{
         font-size: 130%;
+    }
+
+    .artistas-populares h2{
+        position: relative;
+        right: 5px;
     }
 
     .lista-index .artistas-populares h3{
