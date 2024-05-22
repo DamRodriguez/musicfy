@@ -629,7 +629,7 @@ h1{
     margin-right: 5px;
     height: 40px;
     background: rgb(138,0,0);
-    background: radial-gradient(circle, rgba(96, 0, 0, 0.755) 0%, rgba(83, 0, 0, 0.574) 100%);
+    background: radial-gradient(circle, rgba(81, 0, 0, 0.755) 0%, rgba(83, 0, 0, 0.574) 100%);
     border-radius: 10px;
     position: fixed;
     width: calc(100% - 75px);
@@ -672,7 +672,7 @@ h1{
     max-width: 200px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.626);
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.626);
 }
 
 .titulo-index{
@@ -1634,6 +1634,7 @@ textarea {
 
     .formulario, .inicio-sesion{
         width: 280px;
+        margin-top: 90px;
     }
 }
 
