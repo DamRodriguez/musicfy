@@ -765,7 +765,6 @@ h1{
 }
 
 .item-index .titulo-foto-index{
-    width: 75%;
     font-size: 125%;
     font-weight: 350;
 }
@@ -912,8 +911,7 @@ h1{
 }
 
 .nombre1 p{
-    font-weight: 350;
-
+    font-weight: 400;
 }
 
 .cancion-nombre .oyentes1{
