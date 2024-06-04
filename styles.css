@@ -6,8 +6,6 @@
 
 
 body{
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.975) 0%, rgb(0, 0, 0) 100%);
     background-size:auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,6 +15,9 @@ body{
     transition: 1s ease;
 }
 
+.fondoIndex{
+    background-color: black;
+}
 
 /*nosotros*/
 .consultaAqui{
@@ -565,9 +566,9 @@ h1{
     display: flex;
     justify-content: center;
     height: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(63, 0, 0) 100%);
-    position:fixed; 
+    background: linear-gradient(180deg, rgb(32, 0, 0) 65%, rgba(0,0,0,1) 100%);
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.203) inset;
+    position: fixed; 
     top: 0; 
     right: 0;
     border-radius: 10px;
@@ -576,6 +577,8 @@ h1{
     align-items:start;
     margin-bottom: -5px;
     padding-bottom: 10px;
+    z-index: 2;
+
 }
   
 .nav-derecha ul {
@@ -590,20 +593,21 @@ h1{
 }
 
 .nav-derecha ul li{
-    margin-bottom: 30px;
-    padding-top: 50px;
+    margin-bottom: 90px;
+    margin-top: 55px;
     font-size: 90%;
     display: flex;
     justify-content: center;
 }
   
 .nav-derecha ul li a {
-    color: white; 
+    color: rgba(255, 255, 255, 0.816); 
     text-decoration: none;
 }
   
 .nav-derecha ul i:hover {
     -webkit-transform:scale(1.0);transform:scale(1.1);
+    color: white;
 }
 
 .mainIndex{
@@ -616,28 +620,29 @@ h1{
     margin-top: 50px;
     color: white;
     padding-right: 65px;
+    
 }
 
 .Index1 {
-    background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(63, 0, 0) 100%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    
 }
   
 .nav-arriba{
     margin-right: 5px;
     height: 40px;
-    background: rgb(138,0,0);
-    background: radial-gradient(circle, rgba(81, 0, 0, 0.755) 0%, rgba(83, 0, 0, 0.574) 100%);
+    background: radial-gradient(circle, rgba(54, 0, 0, 0.726) 0%, rgba(46, 0, 0, 0.879) 65%);
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.264) inset;
     border-radius: 10px;
     position: fixed;
     width: calc(100% - 75px);
     top: 5px;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    z-index: 999;
+    z-index: 1;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -662,17 +667,20 @@ h1{
     padding: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(86, 10, 10, 0.49) 0%, rgba(46, 7, 7, 0.751) 100%);
+    background: linear-gradient(90deg, rgba(86, 10, 10, 0.49) 0%, rgb(37, 0, 0) 100%);
     display: flex;
     align-items: end;
+    position: relative;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.305), 0px 0px 20px 3px rgba(0, 0, 0, 0) inset;
+
 }
 
 .logo-index img{
     max-width: 200px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.626);
+    box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+    z-index: 0;
 }
 
 .titulo-index{
@@ -717,9 +725,7 @@ h1{
     justify-items: center;
 }
 
-.item-index{
-    text-align: center;
-}
+
 
 .item-index .nombre-artista {
     margin-top: -12px;
@@ -731,31 +737,41 @@ h1{
     top: 8px;
 }
 
-.item-index a:hover{
+.item-index:hover{
     background-color: rgba(255, 255, 255, 0.077);
     box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 4px;
     border-radius: 10px;
-    -webkit-transform:scale(1.0);transform:scale(1.03);
+    -webkit-transform:scale(1);transform:scale(1.05);
 }
 
 .lista-index1 .item-index img{
     box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 4px;
 }
 
-.item-index img{
-    border-radius: 50%;
-    width: 100%;
-    height: auto
-}
+
 
 .item-index .index-album{
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .lista-index1{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6,1fr);
     padding-top: 5px;
+    gap: 5px;
+    justify-content: center;
+}
+
+.item-index {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+}
+
+.item-index img{
+    border-radius: 50%;
+    width: 100%;
 }
 
 
@@ -767,7 +783,11 @@ h1{
 .item-index .titulo-foto-index{
     font-size: 125%;
     font-weight: 350;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 .item-index .nombre-artista{
     font-size: 80%;
@@ -783,13 +803,14 @@ h1{
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgb(69, 1, 1) 100%);
     display: flex;
     align-items: end;
-    background-position: center; 
+    background-position:center; 
     background-repeat:no-repeat;
     background-size:cover;
     height: 20rem;
     display: block;
     align-content: end;
     transition: 1s ease;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.523), 0px 0px 20px 3px rgba(0, 0, 0, 0.458) inset;
 }
 
 .portada-artistas h1{
@@ -1434,11 +1455,271 @@ textarea {
 .tituloMusicfy{
     padding-left: 8px;
     font-size: 400%;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.618);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+/*efectos hover*/
+
+.objeto2{
+    right: 60px;
+    visibility: hidden;
+    border-radius: 10px;
+    margin-top: -10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.066);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.356), 0px 0px 20px 3px rgba(255, 255, 255, 0.118) inset;
+}
+
+.objeto2 i{
+    margin-right: 10px;
+}
+
+.hover-inicio p{
+    font-weight: 350;
+    letter-spacing: 1px;
+    font-size: 110%;
+}
+
+.hover-inicio p{
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+.objeto1, .objeto2{
+    position: absolute;
+}
+
+.objeto1:hover + .objeto2{
+    visibility: visible;
+}
+
+/*boton hover del index*/
+
+i.boton-hover{
+    background-color: rgba(255, 255, 255, 0.034);
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.942);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.647), 0px 0px 20px 3px rgba(255, 255, 255, 0.196) inset;
+    position: absolute;
+    backdrop-filter: blur(7px);
+    opacity: 0;
+    transition: 0.5s ease;
+    transition: opacity 0s;
+}
+
+.item-index:hover .boton-hover{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.boton-hover:hover{
+    -webkit-transform:scale(1.0);transform:scale(1.1);
+    background-color: #ffffff18;
+    cursor: pointer;
+}
+
+.item-index span{
+    display: grid;
+    place-items: end;
+    justify-items: end;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.item-index .boton-lugar2{
+    place-items: end;
+    align-items: end;
+    display: grid;
+    grid-row: 2;
+    justify-self: end;
+}
+
+.boton-lugar2 i{
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.423), 0px 0px 20px 3px rgba(255, 255, 255, 0.196) inset;
+
+}
+
+.contenedor-boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-hover i{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.668);
 }
 
 
+/*hover de tendencia*/
+
+.tendencia-hover{
+    background-color: rgba(0, 0, 0, 0.163);
+    position: absolute;
+    backdrop-filter: blur(10px);
+    visibility: hidden;    /* su opacidad es 0*/
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0px -10px 10px -6px rgba(0, 0, 0, 0.648);
+
+    
+}
+
+p.tendencia-hover{
+    font-size: 90%;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.867);
+}
+
+
+
+.item-index:hover .tendencia-hover{
+    visibility: visible;
+    transition: height 0.5s ease; 
+    height: 15%;
+    overflow: hidden;
+}
+
+.contenedor-tendencia{
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    
+}
+
+.boton-lugar3{
+    place-items: end;
+    align-items: start;
+    display: grid;
+    grid-row: 1;
+    justify-self: end;
+}
+
+/*fondos hover del index*/
+
+.fondo-depeche{
+    background-image: url(img/dm-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo-circle{
+    background-image: url(img/circle-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo-cure{
+    background-image: url(img/cure-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo-one{
+    background-image: url(img/one-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo-boris{
+    background-image: url(img/boris-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo-nafta{
+    background-image: url(img/nafta-index.png);
+    background-size: cover;  
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 1s;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.489), 0px 0px 20px 3px rgba(0, 0, 0, 0.801) inset;
+    filter: grayscale(1);
+}
+
+.fondo2-index{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0;
+}
+
+.contenedor-cancion-click{
+    background-color: rgba(255, 255, 255, 0.803);
+}
+
+
+
 /*media query*/
+
 @media (max-width: 1200px) {
     .inicio-sesion{
         margin-bottom: 65%;
@@ -1447,15 +1728,50 @@ textarea {
     .articulo1{
         margin-bottom: 25%;
     }
+
+    .lista-index1{
+        grid-template-columns: repeat(5,1fr);
+    }
 }
 
+@media (max-width: 1000px){
+    .lista-index1{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
 
 @media (max-width: 900px){
+    .fondo-depeche{
+        background-image: url(img/dm-portada.png);
+    }
+    .fondo-circle{
+        background-image: url(img/pcportada.png);
+    }
+    .fondo-nafta{
+        background-image: url(img/nafta-portada.png);
+    }
+    .fondo-cure{
+        background-image: url(img/the-cure-portada.png);
+    }
+    .fondo-one{
+        background-image: url(img/and-one-fondo.png);
+    }
+    .fondo-boris{
+        background-image: url(img/boris4.png);
+    }
+
+    p.tendencia-hover{
+        font-size: 80%;
+        padding: 10px;
+    }
+
+    .lista-index1{
+        grid-template-columns: repeat(3,1fr);
+    }
 
     .article{
         display: grid;
         grid-template-columns: 1;
-        ;
         justify-items: center;
         align-items: center;
     }
@@ -1471,7 +1787,6 @@ textarea {
         width: 80%;
         padding-bottom: 35px;
         padding-top: 20px;
-
     }
 }
 
@@ -1486,7 +1801,6 @@ textarea {
     .item-ayuda{
         min-width: 300px;
     }
-
     .grid-ayuda .paises-min{
         min-width: 300px;
     }
@@ -1500,6 +1814,30 @@ textarea {
 }
 
 @media (max-width: 750px){
+    
+
+    p.tendencia-hover{
+        font-size: 60%;
+        padding: 10px;
+    }
+
+    .item-index:hover .tendencia-hover{
+        height:10%;
+    }
+
+    .nav-derecha ul li{
+        margin-bottom: 75px;
+    }
+    
+    .objeto2{
+        right: 45px;
+
+    }
+
+    .objeto2 p{
+        font-size: 100%;
+    }
+    
     .AyudaCuenta4 i{
         font-size: 65%;
     }
@@ -1528,6 +1866,8 @@ textarea {
     .item-index .titulo-foto-index{
         font-size: 95%;
         font-weight: 400;
+        overflow: hidden;
+        
     }
 
     .marqueeNav {
@@ -1559,12 +1899,6 @@ textarea {
 
    .logo-index img{
     width: 100px;
-    height: auto;
-    }
-
-    .lista-index1 .item-index img{
-        width: 110%;   
-        height: auto;
     }
 
     .logo-index .logo-index1 h1{
@@ -1580,22 +1914,7 @@ textarea {
     }
 }
 
-@media (max-width: 900px){
-
-    .lista-index .lista-index1{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    
-    }
-
-    .lista-index1 .item-index img{
-        width: 100%;
-        height: auto;
-    }
-}
-
 @media (max-width: 760px){
-
     .Index1 .artista1{
         background-image: url(img/dm-portada.png);
         
@@ -1651,7 +1970,6 @@ textarea {
         margin-top: 90px;
         margin-bottom: 90%;
     }
-
 }
 
 @media (max-width: 750px){
@@ -1709,7 +2027,7 @@ textarea {
     .cancion-nombre .duracion1{
         font-size: 75%;
     }
-   
+
     .portada-artistas{
         padding: 5px;
     }
@@ -1793,6 +2111,24 @@ textarea {
     }
 }
 
+@media (max-width: 650px){
+    .item-index:hover  .tendencia-hover{
+        height:15%;
+    }
+    p.tendencia-hover{
+        font-size: 55%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    i.boton-hover{
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 560px){
     .search-box {
         min-width: 80%;
@@ -1804,3 +2140,13 @@ textarea {
         font-size: 97%;
     }
 }
+
+@media screen and (min-width: 500px) and (max-width: 750px){
+    i.boton-hover{
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+
