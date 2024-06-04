@@ -1712,12 +1712,6 @@ p.tendencia-hover{
     opacity: 0;
 }
 
-.contenedor-cancion-click{
-    background-color: rgba(255, 255, 255, 0.803);
-}
-
-
-
 /*media query*/
 
 @media (max-width: 1200px) {
@@ -1817,7 +1811,7 @@ p.tendencia-hover{
     
 
     p.tendencia-hover{
-        font-size: 60%;
+        font-size: 70%;
         padding: 10px;
     }
 
