@@ -627,14 +627,13 @@ h1{
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(63, 0, 0) 100%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
 }
   
 .nav-arriba{
     margin-right: 5px;
     height: 40px;
     background: radial-gradient(circle, rgba(54, 0, 0, 0.726) 0%, rgba(46, 0, 0, 0.879) 65%);
-    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.264) inset;
+    box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.305), 0px 0px 20px 3px rgba(0, 0, 0, 0.134) inset;
     border-radius: 10px;
     position: fixed;
     width: calc(100% - 75px);
@@ -679,7 +678,7 @@ h1{
     max-width: 200px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 1px 1px 1px 2px rgb(0, 0, 0);
+    filter: drop-shadow(3px 3px 3px rgb(0, 0, 0));
     z-index: 0;
 }
 
@@ -721,14 +720,15 @@ h1{
     color: white;
     text-decoration: none;
     display: grid;
-    padding: 5%;
+    padding: 10px;
     justify-items: center;
 }
 
 
 
 .item-index .nombre-artista {
-    margin-top: -12px;
+    margin-top: -10px;
+    color: rgba(255, 255, 255, 0.812);
 }
 
 .logo-index1{
@@ -1565,7 +1565,7 @@ i.boton-hover{
     position: absolute;
     backdrop-filter: blur(10px);
     visibility: hidden;    /* su opacidad es 0*/
-    height: 0%;
+    height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1585,7 +1585,7 @@ p.tendencia-hover{
 .item-index:hover .tendencia-hover{
     visibility: visible;
     transition: height 0.5s ease; 
-    height: 15%;
+    height: 10%;
     overflow: hidden;
 }
 
@@ -1809,6 +1809,10 @@ p.tendencia-hover{
 }
 
 @media (max-width: 750px){
+
+    .item-index a{
+        padding: 5px;
+    }
     
 
     .contenedor-tendencia .tendencia-hover{
