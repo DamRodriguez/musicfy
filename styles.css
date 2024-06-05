@@ -1511,6 +1511,7 @@ i.boton-hover{
     opacity: 0;
     transition: 0.5s ease;
     transition: opacity 0s;
+    place-items: center;
 }
 
 .item-index:hover .boton-hover{
@@ -1810,8 +1811,8 @@ p.tendencia-hover{
 @media (max-width: 750px){
     
 
-    p.tendencia-hover{
-        font-size: 70%;
+    .contenedor-tendencia .tendencia-hover{
+        font-size: 65%;
         padding: 10px;
     }
 
@@ -2132,6 +2133,9 @@ p.tendencia-hover{
     }
     *{
         font-size: 97%;
+    }
+    .contenedor-tendencia .tendencia-hover{
+        font-size: 60%;
     }
 }
 
