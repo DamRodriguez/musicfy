@@ -601,7 +601,7 @@ h1{
 }
   
 .nav-derecha ul li a {
-    color: rgba(255, 255, 255, 0.816); 
+    color: rgba(192, 192, 192, 0.877);
     text-decoration: none;
 }
   
@@ -891,7 +891,7 @@ h1{
     padding: 5px;
     margin: 3px;
     cursor: pointer;   
-    margin-left: -1px;
+    margin-left: -2px;
 }
 
 .reproducir:hover{
@@ -1711,6 +1711,16 @@ p.tendencia-hover{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     opacity: 0;
+}
+
+.nav-derecha ul li .resaltarIcono{
+    color: rgb(255, 255, 255);
+}
+
+.contenedor-copias{
+    width: 100px;
+    height: 100px;
+    background-color: red;
 }
 
 /*media query*/

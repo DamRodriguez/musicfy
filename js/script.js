@@ -35,8 +35,6 @@ playButtons.forEach((playButton, index) => {
     });
 });
 
-
-
 /*validacion registro*/
 
 function validar(Document){
@@ -347,4 +345,17 @@ fondo.classList.remove("fondo-nafta");
 });
 
 
+/*icono resaltado del nav-derecha cuando se está en ese href*/
+
+const currentUrl = window.location.href;
+
+const navLinks = document.querySelectorAll(".nav-derecha ul li a");
+
+navLinks.forEach(link => {
+    if (link.href === currentUrl) {
+        link.classList.add("resaltarIcono");
+    }
+});
+
+/*..*/
 
