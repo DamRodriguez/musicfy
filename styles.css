@@ -1795,12 +1795,12 @@ p.tendencia-hover{
     border: none;
     padding: 15px;
     font-size: 120%;
-    box-shadow: #ffffff9f 1px 1px 2px, 0px 0px 20px 3px rgba(0, 0, 0, 0.174) inset;
-    background-color: rgba(255, 255, 255, 0.36);
+    box-shadow: #ffffff5a 0px 2px 0px, 0px 0px 20px 3px rgba(0, 0, 0, 0.225) inset;
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     font-weight: 550;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
     margin-top: 20px;
 }
