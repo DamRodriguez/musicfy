@@ -1821,7 +1821,7 @@ p.tendencia-hover{
     border-radius: 5px;
     border: none;
     margin-right: 10px;
-    box-shadow: rgba(255, 255, 255, 0.103) 1px 1px 1px;
+    box-shadow: rgba(255, 255, 255, 0.3) 1px 1px 1px;
     background-color: #70002566;
     color: white;
     font-weight: 500;
