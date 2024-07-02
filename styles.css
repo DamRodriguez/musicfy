@@ -1868,10 +1868,6 @@ p.tendencia-hover{
 }
 
 @media (max-width: 900px){
-    .tabla-artistas {
-        min-width: 100%;
-        font-size: 70%;
-    }
     .tabla-artistas th, td{
         padding: 5px;
     }
@@ -1947,6 +1943,13 @@ p.tendencia-hover{
     }
     .center-fav h1{
         margin-bottom: 20px;
+    }
+    .tabla-artistas {
+        min-width: 100%;
+        font-size: 70%;
+    }
+    .form-artistas label{
+        font-size: 95%;
     }
 }
 
