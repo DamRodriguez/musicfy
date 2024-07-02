@@ -1725,6 +1725,7 @@ p.tendencia-hover{
     width: auto;
     border-collapse: separate;
     border-spacing: 5px;
+    overflow-x: auto;
 }
 
 .tablaArt{
@@ -1745,24 +1746,36 @@ p.tendencia-hover{
     margin-bottom: 40px;
     display: grid;
     justify-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
 }
 
 .form-artistas2{
     display: flex;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+.form-artistas2 div{
+    flex: 1 0 100px;
 }
 
 .form-artistas input{
-    width: 200px;
+    height: 20px;
     padding: 5px;
     border-radius: 5px;
-    margin-right: 15px;
+    margin-right: ;
     box-shadow: #ffffff80 1px 1px 1px;
     background-color: rgba(255, 255, 255, 0.168);
     border: none;
     color: white;
-    font-size: 90%;
+    font-size: 100%;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+
 }
+
 
 .form-artistas label{
     font-size: 110%;
@@ -1775,17 +1788,17 @@ p.tendencia-hover{
     justify-content: center;
     margin-bottom: 40px;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-
+    font-size: 35px;
 }
 
 .form-artistas button{
     border: none;
     padding: 15px;
     font-size: 120%;
-    box-shadow: #ffffff4c 1px 1px 2px, 0px 0px 20px 3px rgba(0, 0, 0, 0.174) inset;
-    background-color: rgba(255, 255, 255, 0.323);
+    box-shadow: #ffffff9f 1px 1px 2px, 0px 0px 20px 3px rgba(0, 0, 0, 0.174) inset;
+    background-color: rgba(255, 255, 255, 0.36);
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight: 550;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
@@ -1815,7 +1828,6 @@ p.tendencia-hover{
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     font-size: 75%;
-    backdrop-filter: blur(10px);
 }
 
 .tabla-artistas .boton-edit{
@@ -1852,9 +1864,24 @@ p.tendencia-hover{
     .lista-index1{
         grid-template-columns: repeat(4,1fr);
     }
+    
 }
 
 @media (max-width: 900px){
+    .tabla-artistas {
+        min-width: 100%;
+        font-size: 70%;
+    }
+    .tabla-artistas th, td{
+        padding: 5px;
+    }
+    .boton-edit{
+        margin-bottom: 5px;
+    }
+    .form-artistas2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .fondo-depeche{
         background-image: url(img/dm-portada.png);
     }
@@ -1908,6 +1935,19 @@ p.tendencia-hover{
     .LogonavInfo img{
         width: 50px;
     }
+    .center-fav h1{
+        font-size: 25px;
+    }
+    .boton-fav{
+        font-size: 30%;
+    }
+    .form-artistas button{
+        font-size: 90%;
+        padding: 15px;
+    }
+    .center-fav h1{
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -1933,7 +1973,6 @@ p.tendencia-hover{
         padding: 5px;
     }
     
-
     .contenedor-tendencia .tendencia-hover{
         font-size: 65%;
         padding: 10px;
@@ -2237,6 +2276,7 @@ p.tendencia-hover{
         font-size: 55%;
         padding: 10px;
     }
+    
 }
 
 @media (max-width: 500px){
@@ -2248,6 +2288,10 @@ p.tendencia-hover{
 }
 
 @media (max-width: 560px){
+    .form-artistas2{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
     .search-box {
         min-width: 80%;
     }

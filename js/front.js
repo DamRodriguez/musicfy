@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tableBody.innerHTML = '';
         artistas.forEach(artista => {
             const row = document.createElement('tr');
-            
             // Convertir la fecha a formato año-mes-día
             const fechaFormacion = new Date(artista.fecha_formacion);
             const year = fechaFormacion.getUTCFullYear();
