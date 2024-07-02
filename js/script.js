@@ -347,15 +347,21 @@ fondo.classList.remove("fondo-nafta");
 
 /*icono resaltado del nav-derecha cuando se está en ese href*/
 
-const currentUrl = window.location.href;
+document.addEventListener('DOMContentLoaded', function() {
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll(".nav-derecha ul li a");
 
-const navLinks = document.querySelectorAll(".nav-derecha ul li a");
+    navLinks.forEach(link => {
+        const linkUrl = new URL(link.href, window.location.origin).href; // Normalizar URL
 
-navLinks.forEach(link => {
-    if (link.href === currentUrl) {
-        link.classList.add("resaltarIcono");
-    }
+        // Comprobar si la URL actual está dentro de la URL del enlace
+        if (currentUrl.includes(linkUrl)) {
+            // Aplicar clase al padre del enlace (<li>)
+            link.closest('a').classList.add("resaltarIcono");
+        }
+    });
 });
+
 
 /*..*/
 

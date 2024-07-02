@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Musicfy_Icon.png">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="https://kit.fontawesome.com/05e3f5f7c1.js" crossorigin="anonymous"></script>
+    <title>Musicfy</title>
+</head>
+
+<body class="fondoIndex" ondragstart="return false">
+    <header>
+        <nav class="nav-derecha">
+            <ul>
+                <li class="hover-inicio">
+                    <div class="objeto1">
+                        <a href="../../index.html"><i class="fa-solid fa-house"></i></a>
+                    </div>
+                    <div class="objeto2">
+                        <p>Inicio</p>
+                    </div>
+                </li>
+                <li class="hover-inicio">
+                    <div class="objeto1">
+                        <a href="../nosotros/nosotros.html"><i class="fa-solid fa-users"></i></a>
+                    </div>
+                    <div class="objeto2">
+                        <p>Nosotros</p>
+                    </div>
+                </li>
+                <li class="hover-inicio">
+                    <div class="objeto1">
+                        <a href="../Ayuda/info.html"><i class="fa-regular fa-circle-question"></i></a>
+                    </div>
+                    <div class="objeto2">
+                        <p>Ayuda</p>
+                    </div>
+                </li>
+                <li class="hover-inicio">
+                    <div class="objeto1">
+                        <a href="../cuenta/inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <div class="objeto2">
+                        <p>Cuenta</p>
+                    </div>
+                </li>
+                <li class="hover-inicio">
+                    <div class="objeto1">
+                        <a href="fav.html"><i class="fa-regular fa-star"></i></a>
+                    </div>
+                    <div class="objeto2">
+                        <p>Favoritos</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainIndex">
+        <div class="nav-arriba">
+            <div class="marqueeNav">
+                <p><i class="fa-solid fa-music fa-fade"></i> La mejor música al alcance de tus oídos <i class="fa-solid fa-music fa-fade"></i></p>
+            </div>    
+        </div>
+
+        <article class="Index1 padding-fav">
+            <div class="tablaArt">
+                <div class="center-fav">
+                    <h1>Gestión de Artistas</h1>
+    
+                    <form id="artistaForm" class="form-artistas">
+                            <div class="form-artistas2">
+                                <input type="hidden" id="artistaId">
+                     
+                                <div>
+                                    <label for="nombre">Nombre:</label><br>
+                                    <input type="text" id="nombre" required>
+                                </div>
+                                <div>
+                                    <label for="genero">Género:</label><br>
+                                    <input type="text" id="genero" required>
+                                </div>
+                                <div>
+                                    <label for="pais">Pais:</label><br>
+                                    <input type="text" id="pais" required>
+                                </div>
+                                <div>
+                                    <label for="pais">Fecha de formación:</label><br>
+                                    <input type="date" id="formacion">
+                                </div>
+                            </div>
+                            
+                            <button class="boton-fav" type="submit">Guardar</button>
+                    </form>
+                </div>
+    
+                <table id="artistasTable" class="tabla-artistas">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Género</th>
+                            <th>Pais</th>
+                            <th>Fecha de formación</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="boton-fav2"></tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+      
+    <footer class="footer">
+
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/damrod_?igsh=MXFteHZmemI0YnlzcQ==" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            <a href="https://wa.me/+5491159641031" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
+            <a href="https://www.facebook.com/damian.rodriguez.52056223/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+        </div>
+
+        <div class="logo-footer">
+            <div class="logo-footer1">
+                <img src="../../img/Icon.png" alt="Logo-de-Musicfy-en-footer">
+            </div>
+
+            <div class="ft-centrado">
+                <div class="ft-columna1">
+                    <h4>Empresa</h4>
+                    <a href="../Nosotros/nosotros.html"><p>Acerca de</p></a>
+                </div>
+
+                <div class="ft-columna2">
+                    <h4>Enlaces útiles</h4>
+                    <a href="../Ayuda/info.html"><p>Asistencia</p></a>
+                </div>
+            </div>    
+        </div>
+
+        <div class="privacidad">
+            <a href="../Terminos/terminos.html"><p>Política de Privacidad</p></a>
+            <p>© 2024 Musicfy Inc.</p>
+        </div>
+
+    </footer>
+    <script src="../../js/front.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+</html>
