@@ -138,27 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         fetchArtistas();
     };
-
-    añadir.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const id = document.getElementById('artistaId').value;
-        const nombre = document.getElementById('nombre').value;
-        const genero = document.getElementById('genero').value;
-        const pais = document.getElementById('pais').value;
-        const fecha_formacion = document.getElementById('formacion').value;
-        const artista = {nombre, genero, pais, fecha_formacion};
-
-        if (isUpdating) {
-            updateArtista(id, artista);
-            isUpdating = false;
-        } else {
-            addArtista(artista);
-        }
-
-        form.reset();
-        document.getElementById('artistaId').value = '';
-    });
-
+ 
     fetchFavoritos();
 
 });
