@@ -79,6 +79,42 @@ def actualizar_artista(id):
     db.commit()    
     cursor.close()
     return jsonify({"mensaje":"Artista actualizado con éxito!"})
+#--------------------------------------------------------------------------------------------------------------------------
+@app.route( "/favoritos", methods=["get"])
+def ver_favoritos():
+    db = mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='12345',
+        database='musicfy' 
+    )
+    
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT a.nombre, a.imagen_url, f.href FROM artistas a JOIN Favoritos f ON a.id = f.artista_id;")
+    
+    favoritos = cursor.fetchall()
+    
+    cursor.close()
+    return jsonify(favoritos)
+
+print(ver_favoritos)
+#--------------------------------------------------------------------------------------------------------------------------
+@app.route( "/añadir_favorito", methods=["post"])
+def agregar_favorito():
+    info = request.json
+    db = mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='12345',
+        database='musicfy' 
+    )
+    
+    cursor = db.cursor()
+    cursor.execute("INSERT INTO Favoritos (artista_id, imagen_url, href) values (%s, %s, %s)", (info["artista_id"],info["imagen_url"],info["href"]))
+    db.commit()    
+    cursor.close()
+    return jsonify({"mensaje":"Favorito agregado con éxito!"})
+
 
 if __name__ == "__main__":
     app.run(debug=True)

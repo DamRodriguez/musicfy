@@ -99,6 +99,68 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     fetchArtistas();
+
+    const div = document.querySelector(".artistasFav");
+    const añadir = document.querySelector(".añadirFav");
+
+    const fetchFavoritos = async () => {
+
+        const response = await fetch('https://damrod99.pythonanywhere.com/favoritos'); // Promesa: esperar a que se complete la solicitud HTTP
+        const favoritos = await response.json(); // Esperar a que se complete la conversión de la respuesta a JSON
+        div.innerHTML = '';
+        favoritos.forEach(favorito => {
+            const fav = document.createElement('div');
+
+            fav.innerHTML = `
+                <div class="item-index item-depeche">
+                        <a href="${favorito.href}">
+                            <img class="img-fav" src="${favorito.imagen_url}" alt="Artista-Depeche-Mode">
+                            <p class="titulo-foto-index">${favorito.nombre}</p>
+                            <span>
+                                <i class="fa-solid fa-play boton-hover"></i>
+                            </span>
+                        </a>
+                </div>
+            `;
+            div.appendChild(fav);
+            
+        });
+        
+    };
+
+    const addFavorito = async (favorito) => {
+        await fetch('https://damrod99.pythonanywhere.com/añadir_favorito', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(favorito)
+        });
+        fetchArtistas();
+    };
+
+    añadir.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('artistaId').value;
+        const nombre = document.getElementById('nombre').value;
+        const genero = document.getElementById('genero').value;
+        const pais = document.getElementById('pais').value;
+        const fecha_formacion = document.getElementById('formacion').value;
+        const artista = {nombre, genero, pais, fecha_formacion};
+
+        if (isUpdating) {
+            updateArtista(id, artista);
+            isUpdating = false;
+        } else {
+            addArtista(artista);
+        }
+
+        form.reset();
+        document.getElementById('artistaId').value = '';
+    });
+
+    fetchFavoritos();
+
 });
 
 
@@ -108,5 +170,7 @@ document.getElementById('formacion').addEventListener('change', function() {
     let formattedDate = date.toISOString().split('T')[0];
     this.value = formattedDate;
 });
+
+// ---------------------------------------------------------------------------------------------------------------
 
 
