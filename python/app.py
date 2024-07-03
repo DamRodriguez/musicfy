@@ -58,7 +58,7 @@ def agregar_artista():
     
     cursor = db.cursor()
     cursor.execute("INSERT INTO artistas (nombre, genero, pais, fecha_formacion) values (%s, %s, %s, %s)", (info["nombre"],info["genero"],info["pais"],info["fecha_formacion"]))
-    db.commit()    
+    db.commit()
     cursor.close()
     return jsonify({"mensaje":"Artista agregado con éxito!"})
 #--------------------------------------------------------------------------------------------------------------------------

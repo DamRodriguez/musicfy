@@ -110,33 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
         div.innerHTML = '';
         favoritos.forEach(favorito => {
             const fav = document.createElement('div');
+            fav.classList.add('item-index');
 
             fav.innerHTML = `
-                <div class="item-index item-depeche">
-                        <a href="${favorito.href}">
-                            <img class="img-fav" src="${favorito.imagen_url}" alt="Artista-Depeche-Mode">
-                            <p class="titulo-foto-index">${favorito.nombre}</p>
-                            <span>
-                                <i class="fa-solid fa-play boton-hover"></i>
-                            </span>
-                        </a>
-                </div>
+                <a href="${favorito.href}">
+                    <img src="${favorito.imagen_url}" alt="Artista">
+                    <p class="titulo-foto-index">${favorito.nombre}</p>
+                    <span>
+                        <i class="fa-solid fa-play boton-hover"></i>
+                    </span>
+                </a>
             `;
             div.appendChild(fav);
             
         });
-        
-    };
-
-    const addFavorito = async (favorito) => {
-        await fetch('https://damrod99.pythonanywhere.com/añadir_favorito', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(favorito)
-        });
-        fetchArtistas();
     };
  
     fetchFavoritos();
