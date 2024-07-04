@@ -1850,8 +1850,9 @@ p.tendencia-hover{
 }
 
 .añadirFav button{
-    background-color: transparent;
+    background-color: red;
     border: none;
+    cursor: pointer;
 }
 
 .añadirFav i{
@@ -1865,6 +1866,7 @@ p.tendencia-hover{
     -webkit-transform:scale(1.0);transform:scale(1.05);
 
 }
+
 
 
 /*media query*/

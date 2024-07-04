@@ -99,45 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     fetchArtistas();
-
-    const div = document.querySelector(".artistasFav");
-    const añadir = document.querySelector(".añadirFav");
-
-    const fetchFavoritos = async () => {
-
-        const response = await fetch('https://damrod99.pythonanywhere.com/favoritos'); // Promesa: esperar a que se complete la solicitud HTTP
-        const favoritos = await response.json(); // Esperar a que se complete la conversión de la respuesta a JSON
-        div.innerHTML = '';
-        favoritos.forEach(favorito => {
-            const fav = document.createElement('div');
-            fav.classList.add('item-index');
-
-            fav.innerHTML = `
-                <a href="${favorito.href}">
-                    <img src="${favorito.imagen_url}" alt="Artista">
-                    <p class="titulo-foto-index">${favorito.nombre}</p>
-                    <span>
-                        <i class="fa-solid fa-play boton-hover"></i>
-                    </span>
-                </a>
-            `;
-            div.appendChild(fav);
-            
-        });
-    };
- 
-    fetchFavoritos();
-
 });
-
-
-document.getElementById('formacion').addEventListener('change', function() {
-    let input = this.value;
-    let date = new Date(input);
-    let formattedDate = date.toISOString().split('T')[0];
-    this.value = formattedDate;
-});
-
-// ---------------------------------------------------------------------------------------------------------------
 
 

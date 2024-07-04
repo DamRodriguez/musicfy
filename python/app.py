@@ -6,114 +6,144 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-#get - consultar informacion
-#post - insetar un nuevo registro/elemento
-#delete - eliminar un elemento
-#put - actualizar completamente un elemento
-#patch - actualizar parcialmente
+# Configuración de conexión a la base de datos
+db_config = {
+    'host': 'damrod99.mysql.pythonanywhere-services.com',
+    'user': 'damrod99',
+    'password': 'musicfy123',
+    'database': 'damrod99$musicfy'
+}
 
-@app.route( "/artistas", methods=["get"])
+# Endpoint para consultar todos los artistas
+@app.route("/artistas", methods=["GET"])
 def ver_artistas():
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
-    
+    db = mysql.connector.connect(**db_config)
     cursor = db.cursor(dictionary=True)
-    cursor.execute("select * from artistas")
-    
+    cursor.execute("SELECT * FROM artistas")
     artistas = cursor.fetchall()
-    
     cursor.close()
     return jsonify(artistas)
-#--------------------------------------------------------------------------------------------------------------------------
-@app.route( "/eliminar_artista/<int:id>", methods=["delete"])
+
+# Endpoint para eliminar un artista por ID
+@app.route("/eliminar_artista/<int:id>", methods=["DELETE"])
 def eliminar_artista(id):
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
-    
+    db = mysql.connector.connect(**db_config)
     cursor = db.cursor()
-    cursor.execute("DELETE FROM artistas WHERE id= %s",(id,))
-    db.commit()    
-    cursor.close()
-    return jsonify({"mensaje":"Eliminado!"})
-#--------------------------------------------------------------------------------------------------------------------------
-@app.route( "/nuevo_artista", methods=["post"])
-def agregar_artista():
-    info = request.json
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
-    if isinstance(fecha_formacion, str):
-            fecha_formacion = datetime.strptime(fecha_formacion, '%Y-%m-%d').date()
-    
-    cursor = db.cursor()
-    cursor.execute("INSERT INTO artistas (nombre, genero, pais, fecha_formacion) values (%s, %s, %s, %s)", (info["nombre"],info["genero"],info["pais"],info["fecha_formacion"]))
+    cursor.execute("DELETE FROM artistas WHERE id = %s", (id,))
     db.commit()
     cursor.close()
-    return jsonify({"mensaje":"Artista agregado con éxito!"})
-#--------------------------------------------------------------------------------------------------------------------------
-@app.route( "/actualizar_artista<int:id>", methods=["put"])
+    return jsonify({"mensaje": "Artista eliminado!"})
+
+# Endpoint para agregar un nuevo artista
+@app.route("/nuevo_artista", methods=["POST"])
+def agregar_artista():
+    info = request.json
+    fecha_formacion = info.get("fecha_formacion")
+    if isinstance(fecha_formacion, str):
+        fecha_formacion = datetime.strptime(fecha_formacion, '%Y-%m-%d').date()
+
+    db = mysql.connector.connect(**db_config)
+    cursor = db.cursor()
+    cursor.execute("INSERT INTO artistas (nombre, genero, pais, fecha_formacion) VALUES (%s, %s, %s, %s)",
+                   (info["nombre"], info["genero"], info["pais"], fecha_formacion))
+    db.commit()
+    cursor.close()
+    return jsonify({"mensaje": "Artista agregado con éxito!"})
+
+# Endpoint para actualizar un artista por ID
+@app.route("/actualizar_artista/<int:id>", methods=["PUT"])
 def actualizar_artista(id):
     info = request.json
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
+    fecha_formacion = info.get("fecha_formacion")
     if isinstance(fecha_formacion, str):
-            fecha_formacion = datetime.strptime(fecha_formacion, '%Y-%m-%d').date()
-    
-    cursor = db.cursor()
-    cursor.execute("UPDATE artistas SET nombre = %s, genero= %s, pais= %s, fecha_formacion= %s WHERE id = %s", (info["nombre"],info["genero"],info["pais"],info["fecha_formacion"], id))
-    db.commit()    
-    cursor.close()
-    return jsonify({"mensaje":"Artista actualizado con éxito!"})
-#--------------------------------------------------------------------------------------------------------------------------
-@app.route( "/favoritos", methods=["get"])
-def ver_favoritos():
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
-    
-    cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT a.nombre, a.imagen_url, f.href FROM artistas a JOIN Favoritos f ON a.id = f.artista_id;")
-    
-    favoritos = cursor.fetchall()
-    
-    cursor.close()
-    return jsonify(favoritos)
+        fecha_formacion = datetime.strptime(fecha_formacion, '%Y-%m-%d').date()
 
-print(ver_favoritos)
-#--------------------------------------------------------------------------------------------------------------------------
-@app.route( "/añadir_favorito", methods=["post"])
+    db = mysql.connector.connect(**db_config)
+    cursor = db.cursor()
+    cursor.execute("UPDATE artistas SET nombre = %s, genero = %s, pais = %s, fecha_formacion = %s WHERE id = %s",
+                   (info["nombre"], info["genero"], info["pais"], fecha_formacion, id))
+    db.commit()
+    cursor.close()
+    return jsonify({"mensaje": "Artista actualizado con éxito!"})
+
+
+@app.route("/favoritos", methods=["GET"])
+def ver_favoritos():
+    try:
+        # Conexión a la base de datos
+        db = mysql.connector.connect(**db_config)
+        cursor = db.cursor(dictionary=True)
+
+        # Actualizar la tabla Favoritos antes de hacer la consulta SELECT
+        update_query = """
+        UPDATE Favoritos f
+        JOIN artistas a ON f.artista_id = a.id
+        SET f.imagen_url = a.imagen_url
+        """
+        cursor.execute(update_query)
+        db.commit()
+
+        # Consulta para obtener los favoritos con sus nombres e imagen_url
+        select_query = """
+        SELECT a.id, a.nombre, a.imagen_url, f.href
+        FROM artistas a
+        JOIN Favoritos f ON a.id = f.artista_id
+        """
+        cursor.execute(select_query)
+        favoritos = cursor.fetchall()
+
+        cursor.close()
+        db.close()
+
+        # Convertir resultado a JSON y devolverlo
+        return jsonify(favoritos)
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+@app.route("/añadir_favorito", methods=["POST"])
 def agregar_favorito():
     info = request.json
-    db = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='12345',
-        database='musicfy' 
-    )
-    
+    db = mysql.connector.connect(**db_config)
+
+    try:
+        cursor = db.cursor()
+
+        # Verificar si el registro ya existe
+        check_query = "SELECT COUNT(*) FROM Favoritos WHERE artista_id = %s AND imagen_url = %s AND href = %s"
+        cursor.execute(check_query, (info["artista_id"], info["imagen_url"], info["href"]))
+        result = cursor.fetchone()
+
+        if result[0] > 0:
+            mensaje = {"mensaje": "El favorito ya existe!"}
+        else:
+            # Insertar si no existe
+            insert_query = "INSERT INTO Favoritos (artista_id, imagen_url, href) VALUES (%s, %s, %s)"
+            cursor.execute(insert_query, (info["artista_id"], info["imagen_url"], info["href"]))
+            db.commit()
+            mensaje = {"mensaje": "Favorito agregado con éxito!"}
+    except mysql.connector.Error as err:
+        print(f"Error en la base de datos: {err}")
+        mensaje = {"mensaje": f"Error: {err}"}
+    except Exception as e:
+        print(f"Error desconocido: {e}")
+        mensaje = {"mensaje": f"Error: {e}"}
+    finally:
+        cursor.close()
+        db.close()
+
+    return jsonify(mensaje)
+
+
+@app.route( "/eliminar_favorito/<int:id>", methods=["delete"])
+def eliminar_favorito(id):
+    db = mysql.connector.connect(**db_config)
+
     cursor = db.cursor()
-    cursor.execute("INSERT INTO Favoritos (artista_id, imagen_url, href) values (%s, %s, %s)", (info["artista_id"],info["imagen_url"],info["href"]))
-    db.commit()    
+    cursor.execute("DELETE FROM Favoritos WHERE artista_id= %s",(id,))
+    db.commit()
     cursor.close()
-    return jsonify({"mensaje":"Favorito agregado con éxito!"})
+    return jsonify({"mensaje":"Eliminado!"})
 
 
 if __name__ == "__main__":

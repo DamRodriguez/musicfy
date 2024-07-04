@@ -257,7 +257,6 @@ var fondo = document.querySelector(".fondo2-index");
 /*depeche mode*/
 
 item1.addEventListener("mouseover", function() {
-
 fondo.classList.add("fondo-depeche");
 fondo.classList.remove("fondo2-index");
 
