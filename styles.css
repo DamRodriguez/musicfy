@@ -1922,7 +1922,6 @@ p.tendencia-hover{
     font-size: 85%;
     bottom: 35px;
     position: relative;
-    left: 0;
 }
 
 .FavAñadir .objeto1 i{
@@ -2030,7 +2029,6 @@ p.tendencia-hover{
         font-size: 60%;
         position: relative;
         bottom: 20px;
-        left: 0px;
     }
     .LogonavInfo img{
         width: 50px;
