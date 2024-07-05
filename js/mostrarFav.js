@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             favoritos.forEach(favorito => {
                 const fav = document.createElement('div');
-                fav.classList.add('item-index');
+                fav.classList.add('item-index', 'eliminarHover');
 
                 fav.innerHTML = `
                     <input type="hidden" value="${favorito.id}">
@@ -26,10 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <i class="fa-solid fa-play boton-hover"></i>
                         </span>
                     </a>
-                    <button onclick="deleteFavorito(${favorito.id})">Eliminar</button>
+                    <button class="eliminarFav" onclick="deleteFavorito(${favorito.id})">Eliminar</button>
                 `;
                 div.appendChild(fav);
             });
+            
         } catch (error) {
             console.error('Error al obtener la lista de favoritos:', error);
         }
