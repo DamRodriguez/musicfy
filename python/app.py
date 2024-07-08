@@ -8,10 +8,10 @@ CORS(app)
 
 # Configuración de conexión a la base de datos
 db_config = {
-    'host': 'damrod99.mysql.pythonanywhere-services.com',
-    'user': 'damrod99',
-    'password': 'musicfy123',
-    'database': 'damrod99$musicfy'
+    'host': '',   # (está puesto en pythonanywhere)
+    'user': '',
+    'password': '',
+    'database': ''
 }
 
 # Endpoint para consultar todos los artistas
@@ -100,6 +100,7 @@ def ver_favoritos():
 
     except Exception as e:
         return jsonify({"error": str(e)})
+
 
 @app.route("/añadir_favorito", methods=["POST"])
 def agregar_favorito():
