@@ -116,24 +116,28 @@ def agregar_favorito():
         result = cursor.fetchone()
 
         if result[0] > 0:
-            mensaje = {"mensaje": "El favorito ya existe!"}
+            mensaje = {"mensaje": info.get("mensaje_existente")}
+            status_code = 409
         else:
             # Insertar si no existe
             insert_query = "INSERT INTO Favoritos (artista_id, imagen_url, href) VALUES (%s, %s, %s)"
             cursor.execute(insert_query, (info["artista_id"], info["imagen_url"], info["href"]))
             db.commit()
-            mensaje = {"mensaje": "Favorito agregado con éxito!"}
+            mensaje = {"mensaje": info.get("mensaje_exito")}
+            status_code = 200
     except mysql.connector.Error as err:
         print(f"Error en la base de datos: {err}")
         mensaje = {"mensaje": f"Error: {err}"}
+        status_code = 500
     except Exception as e:
         print(f"Error desconocido: {e}")
         mensaje = {"mensaje": f"Error: {e}"}
+        status_code = 500
     finally:
         cursor.close()
         db.close()
 
-    return jsonify(mensaje)
+    return jsonify(mensaje), status_code
 
 
 @app.route( "/eliminar_favorito/<int:id>", methods=["delete"])

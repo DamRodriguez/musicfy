@@ -1929,6 +1929,29 @@ p.tendencia-hover{
     backdrop-filter: blur(15px);
 }
 
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Sobre otros elementos */
+    width: 100%;
+    top: 0;
+}
+
+.modal-content {
+    background-color: rgba(128, 0, 0, 0.352);
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    padding: 8px;
+    width: fit-content;
+    border-radius: 15px;
+    top: 0;
+    margin-top: 50px;
+    font-size: 120%;
+    box-shadow: #000000b1 0px 2px 15px, 0px 0px 20px 3px rgba(255, 255, 255, 0.03) inset;
+    border: 2px groove rgba(255, 255, 255, 0.092);
+    
+}
+
 /*media query*/
 
 @media (max-width: 1200px) {
@@ -2024,6 +2047,12 @@ p.tendencia-hover{
 }
 
 @media (max-width: 760px){
+
+    .modal-content {
+        padding: 0px;
+        margin-top: 50px;
+        font-size: 100%;
+    }
 
     .objeto2-1{
         font-size: 75%;
