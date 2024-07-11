@@ -1930,9 +1930,9 @@ p.tendencia-hover{
 }
 
 .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1; /* Sobre otros elementos */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     width: 100%;
     top: 0;
 }
