@@ -440,5 +440,3 @@ if tendCompleta:
 #eliminar_cancion(id_cancion)
 
 #eliminar_tendencia(id_tendencia)
-
-
