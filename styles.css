@@ -695,11 +695,39 @@ h1{
     padding-bottom: 8px;
 }
 
-.lista-index{
+.lista-index {
     margin: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.151);
     padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
 }
+
+.lista-index::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.09);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease, width 1s ease;
+    animation: bordeAnimacion 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes bordeAnimacion {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
 
 .artistas-populares{
     width: 250px;
