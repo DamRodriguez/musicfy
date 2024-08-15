@@ -53,5 +53,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-/*..*/
+/*animacion discografia*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const artistasPopulares = document.querySelectorAll('.artistas-populares'); 
+    const items = document.querySelectorAll('.item-index'); 
+
+    setTimeout(() => {
+        artistasPopulares.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.opacity = 1;
+            }, index * 500);
+        });
+    }, 1000);
+
+    setTimeout(() => {
+        items.forEach((item, index) => {
+            item.style.setProperty('--delay', `${index * 0.1}s`);
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aparecer');
+                    }
+                });
+            });
+            observer.observe(item);
+        });
+    }, 1000);
+});
 
