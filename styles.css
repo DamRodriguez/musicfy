@@ -1825,7 +1825,7 @@ p.tendencia-hover{
     justify-content: center;
     margin-bottom: 40px;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 25px;
 }
 
@@ -2132,7 +2132,7 @@ p.tendencia-hover{
         width: 50px;
     }
     .center-fav h1{
-        font-size: 25px;
+        font-size: 20px;
     }
     .boton-fav{
         font-size: 30%;
@@ -2142,7 +2142,7 @@ p.tendencia-hover{
         padding: 15px;
     }
     .center-fav h1{
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .tabla-artistas {
         min-width: 100%;

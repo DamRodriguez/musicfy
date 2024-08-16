@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 element.style.opacity = 1;
             }, index * 500);
         });
-    }, 1000);
+    }, 10);
 
     setTimeout(() => {
         items.forEach((item, index) => {
@@ -79,6 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             observer.observe(item);
         });
-    }, 1000);
+    }, 10);
 });
 
