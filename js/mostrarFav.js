@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             favoritos.forEach(favorito => {
                 const fav = document.createElement('div');
-                fav.classList.add('item-index', 'eliminarHover');
+                fav.classList.add('item-index', 'eliminarHover', 'aparecer');
 
                 fav.innerHTML = `
                     <input type="hidden" value="${favorito.id}">
