@@ -961,7 +961,7 @@ h1{
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 3fr 0fr;
-    height: 130%;
+    height: auto;
     align-items: center;
 }
 
@@ -2301,10 +2301,6 @@ p.tendencia-hover{
         width: 55px;
     }
 
-    .canciones .contenedor-cancion{
-        height: 45px;
-    }
-
     .portada-artistas p{
         font-size: 70%;
     }
@@ -2333,6 +2329,10 @@ p.tendencia-hover{
 }
 
 @media (max-width: 750px){
+
+    .canciones .contenedor-cancion{
+        height: 45px;
+    }
 
     .footer{
         margin-right: 55px;
