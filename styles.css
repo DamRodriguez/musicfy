@@ -1072,6 +1072,7 @@ h1{
 
 .dm-pequeño{
     font-size: 70%;
+    color: rgba(255, 255, 255, 0.804);
 }
 
 .cancion-nombre .grupo1{
@@ -2366,6 +2367,7 @@ p.tendencia-hover{
 
     .oyentes1{
         grid-area: oyentes;
+        color: rgba(255, 255, 255, 0.777);
     }
 
     .sin-oyentes{
