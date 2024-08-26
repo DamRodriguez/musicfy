@@ -777,8 +777,6 @@ h1{
     box-shadow: rgba(0, 0, 0, 0.336) 1px 1px 4px;
 }
 
-
-
 .item-index .index-album{
     border-radius: 10px;
 }
@@ -2173,6 +2171,14 @@ p.tendencia-hover{
 
 @media (max-width: 750px){
 
+    .item-index:hover{
+        border-radius: 5px;
+    }
+    
+    .item-index .index-album{
+        border-radius: 5px;
+    }
+
     .item-index a{
         padding: 5px;
     }
@@ -2408,10 +2414,6 @@ p.tendencia-hover{
 
     .Index1 .portada1 img{
         width: 130px;
-    }
-
-    .Index1 .portada1 .logo-index1 p{
-        font-size: 70%;
     }
 
     .contenedor-cancion .cancion-nombre .grupo1{
